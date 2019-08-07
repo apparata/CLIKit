@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CommandVariadicInput Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/CommandVariadicInput" class="dashAnchor"></a>
+    <a title="CommandVariadicInput Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/apparata/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        CommandVariadicInput Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CommandFlag.html">CommandFlag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandLineParser.html">CommandLineParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOption.html">CommandOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOptionalInput.html">CommandOptionalInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandRequiredInput.html">CommandRequiredInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandUsage.html">CommandUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandVariadicInput.html">CommandVariadicInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Console.html">Console</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutableFinder.html">ExecutableFinder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Execution.html">Execution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutionMode.html">ExecutionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LineReader.html">LineReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardBaseOutput.html">StandardBaseOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit13StandardErrorC">StandardError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardIO.html">StandardIO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardInput.html">StandardInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit14StandardOutputC">StandardOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess.html">Subprocess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubprocessResult.html">SubprocessResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/enabledLogLevels">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit16enabledLogLevelsAA07EnabledcD0Vvp">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit9moduleLogSo9OS_os_logCSgvp">moduleLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandInputType.html">CommandInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandLineError.html">CommandLineError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardEnvironmentVariable.html">StandardEnvironmentVariable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SubprocessError.html">SubprocessError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode.html">TerminalCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearScreen.html">– ClearScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearLine.html">– ClearLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/TextStyle.html">– TextStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ExtendedColor.html">– ExtendedColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalType.html">TerminalType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Regex.html">Regex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_SStF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Command.html">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentSpecification.html">CommandArgumentSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentValue.html">CommandArgumentValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandFlagSpecification.html">CommandFlagSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandInputSpecification.html">CommandInputSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandOptionSpecification.html">CommandOptionSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Commands.html">Commands</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WrapsFileHandle.html">WrapsFileHandle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/EnabledLogLevels.html">EnabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString.html">TerminalString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/Fragment.html">– Fragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>CommandVariadicInput</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@propertyWrapper</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">CommandVariadicInput</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CommandInputSpecification.html">CommandInputSpecification</a></span> <span class="k">where</span> <span class="kt">Value</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CommandArgumentValue.html">CommandArgumentValue</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC15validationRegexSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/validationRegex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC15validationRegexSSSgvp">validationRegex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">validationRegex</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC4typeAA0bD4TypeOvp"></a>
+                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC4typeAA0bD4TypeOvp">type</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Enums/CommandInputType.html">CommandInputType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC12wrappedValueSayxGvp"></a>
+                    <a name="//apple_ref/swift/Property/wrappedValue" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC12wrappedValueSayxGvp">wrappedValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">wrappedValue</span><span class="p">:</span> <span class="p">[</span><span class="kt">Value</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC5regex11descriptionACyxGSSSg_SStcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(regex:description:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC5regex11descriptionACyxGSSSg_SStcfc">init(regex:description:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">regex</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC9bindValueyySSKF"></a>
+                    <a name="//apple_ref/swift/Method/bindValue(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC9bindValueyySSKF">bindValue(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">bindValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">argument</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit20CommandVariadicInputC10assignNameyySSF"></a>
+                    <a name="//apple_ref/swift/Method/assignName(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit20CommandVariadicInputC10assignNameyySSF">assignName(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">assignName</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

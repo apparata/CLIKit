@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>StandardEnvironmentVariable Enumeration Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Enum/StandardEnvironmentVariable" class="dashAnchor"></a>
+    <a title="StandardEnvironmentVariable Enumeration Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/apparata/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        StandardEnvironmentVariable Enumeration Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CommandFlag.html">CommandFlag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandLineParser.html">CommandLineParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOption.html">CommandOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOptionalInput.html">CommandOptionalInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandRequiredInput.html">CommandRequiredInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandUsage.html">CommandUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandVariadicInput.html">CommandVariadicInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Console.html">Console</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutableFinder.html">ExecutableFinder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Execution.html">Execution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutionMode.html">ExecutionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LineReader.html">LineReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardBaseOutput.html">StandardBaseOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit13StandardErrorC">StandardError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardIO.html">StandardIO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardInput.html">StandardInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit14StandardOutputC">StandardOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess.html">Subprocess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubprocessResult.html">SubprocessResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/enabledLogLevels">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit16enabledLogLevelsAA07EnabledcD0Vvp">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit9moduleLogSo9OS_os_logCSgvp">moduleLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandInputType.html">CommandInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandLineError.html">CommandLineError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardEnvironmentVariable.html">StandardEnvironmentVariable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SubprocessError.html">SubprocessError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode.html">TerminalCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearScreen.html">– ClearScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearLine.html">– ClearLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/TextStyle.html">– TextStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ExtendedColor.html">– ExtendedColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalType.html">TerminalType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Regex.html">Regex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_SStF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Command.html">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentSpecification.html">CommandArgumentSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentValue.html">CommandArgumentValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandFlagSpecification.html">CommandFlagSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandInputSpecification.html">CommandInputSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandOptionSpecification.html">CommandOptionSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Commands.html">Commands</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WrapsFileHandle.html">WrapsFileHandle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/EnabledLogLevels.html">EnabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString.html">TerminalString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/Fragment.html">– Fragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>StandardEnvironmentVariable</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">StandardEnvironmentVariable</span> <span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO4useryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/user" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO4useryA2CmF">user</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">user</span> <span class="o">=</span> <span class="s">"USER"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO4homeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/home" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO4homeyA2CmF">home</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">home</span> <span class="o">=</span> <span class="s">"HOME"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO4pathyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/path" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO4pathyA2CmF">path</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">path</span> <span class="o">=</span> <span class="s">"PATH"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO6tmpDiryA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/tmpDir" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO6tmpDiryA2CmF">tmpDir</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tmpDir</span> <span class="o">=</span> <span class="s">"TMPDIR"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO5shellyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/shell" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO5shellyA2CmF">shell</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">shell</span> <span class="o">=</span> <span class="s">"SHELL"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO4termyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/term" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO4termyA2CmF">term</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">term</span> <span class="o">=</span> <span class="s">"TERM"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO11termProgramyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/termProgram" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO11termProgramyA2CmF">termProgram</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">termProgram</span> <span class="o">=</span> <span class="s">"TERM_PROGRAM"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO2tzyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/tz" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO2tzyA2CmF">tz</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">tz</span> <span class="o">=</span> <span class="s">"TZ"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO4langyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lang" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO4langyA2CmF">lang</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lang</span> <span class="o">=</span> <span class="s">"LANG"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO8languageyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/language" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO8languageyA2CmF">language</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">language</span> <span class="o">=</span> <span class="s">"LANGUAGE"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO7lcCTypeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcCType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO7lcCTypeyA2CmF">lcCType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcCType</span> <span class="o">=</span> <span class="s">"LC_CTYPE"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO9lcNumericyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcNumeric" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO9lcNumericyA2CmF">lcNumeric</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcNumeric</span> <span class="o">=</span> <span class="s">"LC_NUMERIC"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO6lcTimeyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcTime" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO6lcTimeyA2CmF">lcTime</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcTime</span> <span class="o">=</span> <span class="s">"LC_TIME"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO9lcCollateyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcCollate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO9lcCollateyA2CmF">lcCollate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcCollate</span> <span class="o">=</span> <span class="s">"LC_COLLATE"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO10lcMonetaryyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcMonetary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO10lcMonetaryyA2CmF">lcMonetary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcMonetary</span> <span class="o">=</span> <span class="s">"LC_MONETARY"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO10lcMessagesyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcMessages" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO10lcMessagesyA2CmF">lcMessages</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcMessages</span> <span class="o">=</span> <span class="s">"LC_MESSAGES"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO7lcPaperyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcPaper" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO7lcPaperyA2CmF">lcPaper</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcPaper</span> <span class="o">=</span> <span class="s">"LC_PAPER"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO6lcNameyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO6lcNameyA2CmF">lcName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcName</span> <span class="o">=</span> <span class="s">"LC_NAME"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO9lcAddressyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcAddress" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO9lcAddressyA2CmF">lcAddress</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcAddress</span> <span class="o">=</span> <span class="s">"LC_ADDRESS"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO11lcTelephoneyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcTelephone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO11lcTelephoneyA2CmF">lcTelephone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcTelephone</span> <span class="o">=</span> <span class="s">"LC_TELEPHONE"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO13lcMeasurementyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcMeasurement" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO13lcMeasurementyA2CmF">lcMeasurement</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcMeasurement</span> <span class="o">=</span> <span class="s">"LC_MEASUREMENT"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO16lcIdentificationyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcIdentification" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO16lcIdentificationyA2CmF">lcIdentification</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcIdentification</span> <span class="o">=</span> <span class="s">"LC_IDENTIFICATION"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit27StandardEnvironmentVariableO5lcAllyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/lcAll" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit27StandardEnvironmentVariableO5lcAllyA2CmF">lcAll</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">lcAll</span> <span class="o">=</span> <span class="s">"LC_ALL"</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

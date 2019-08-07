@@ -1,0 +1,1776 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Path Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/Path" class="dashAnchor"></a>
+    <a title="Path Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/apparata/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Path Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CommandFlag.html">CommandFlag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandLineParser.html">CommandLineParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOption.html">CommandOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOptionalInput.html">CommandOptionalInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandRequiredInput.html">CommandRequiredInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandUsage.html">CommandUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandVariadicInput.html">CommandVariadicInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Console.html">Console</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutableFinder.html">ExecutableFinder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Execution.html">Execution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutionMode.html">ExecutionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LineReader.html">LineReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardBaseOutput.html">StandardBaseOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit13StandardErrorC">StandardError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardIO.html">StandardIO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardInput.html">StandardInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit14StandardOutputC">StandardOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess.html">Subprocess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubprocessResult.html">SubprocessResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/enabledLogLevels">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit16enabledLogLevelsAA07EnabledcD0Vvp">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit9moduleLogSo9OS_os_logCSgvp">moduleLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandInputType.html">CommandInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandLineError.html">CommandLineError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardEnvironmentVariable.html">StandardEnvironmentVariable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SubprocessError.html">SubprocessError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode.html">TerminalCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearScreen.html">– ClearScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearLine.html">– ClearLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/TextStyle.html">– TextStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ExtendedColor.html">– ExtendedColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalType.html">TerminalType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Regex.html">Regex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_SStF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Command.html">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentSpecification.html">CommandArgumentSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentValue.html">CommandArgumentValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandFlagSpecification.html">CommandFlagSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandInputSpecification.html">CommandInputSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandOptionSpecification.html">CommandOptionSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Commands.html">Commands</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WrapsFileHandle.html">WrapsFileHandle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/EnabledLogLevels.html">EnabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString.html">TerminalString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/Fragment.html">– Fragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Path</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Path</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a file system path.</p>
+
+<ul>
+<li>Example:
+&ldquo;`
+let absolutePath = Path(<q>/usr/bin/zip</q>)
+absolutePath.isAbsolute
+absolutePath.isRelative</li>
+</ul>
+
+<p>let relativePath = Path(<q>bin/whatever</q>)
+relativePath.isAbsolute
+relativePath.isRelative</p>
+
+<p>let concatenatedPath = Path(<q>/usr</q>) + Path(<q>/bin</q>)</p>
+
+<p>let messyPath = Path(<q>//usr/../usr/local/bin/./whatever</q>)
+messyPath.normalized</p>
+
+<p>let pathFromLiteralString: Path = <q>/this/is/a/path</q>
+let pathFromEmptyString: Path = &rdquo;<q>
+let pathFromConcatenatedStrings: Path =</q>/usr<q>+</q>/bin&quot;</p>
+
+<p>let pathFromComponents = Path(components: [<q>/</q>, <q>usr/</q>, <q>bin</q>, <q>/</q>, <q>swift</q>])
+let pathFromEmptyComponents = Path(components: [])</p>
+
+<p>let appendedPath = Path(<q>/usr/local</q>).appendingComponent(<q>bin</q>)
+let appendedPath3 = Path(<q>/usr/local</q>).appending(Path(<q>bin</q>))
+let appendedPath2 = Path(<q>/usr/local</q>) + Path(<q>bin</q>)</p>
+
+<p>let imagePath = Path(<q>photos/photo</q>).appendingExtension(<q>jpg</q>)
+imagePath.extension</p>
+
+<p>let imagePathWithoutExtension = imagePath.deletingExtension
+let imagePathWithoutLastComponent = imagePath.deletingLastComponent</p>
+
+<p>absolutePath.exists
+absolutePath.isFile
+absolutePath.isDirectory
+absolutePath.isDeletable
+absolutePath.isExecutable
+absolutePath.isReadable
+absolutePath.isWritable</p>
+<pre class="highlight swift"><code></code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10isAbsoluteSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isAbsolute" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10isAbsoluteSbvp">isAbsolute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isAbsolute</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10isRelativeSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isRelative" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10isRelativeSbvp">isRelative</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isRelative</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10normalizedACvp"></a>
+                    <a name="//apple_ref/swift/Property/normalized" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10normalizedACvp">normalized</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">normalized</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV6stringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/string" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV6stringSSvp">string</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV3url10Foundation3URLVvp"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV3url10Foundation3URLVvp">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathVACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathVACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathVyACSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathVyACSScfc">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV9appendingyA2CF"></a>
+                    <a name="//apple_ref/swift/Method/appending(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV9appendingyA2CF">appending(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appending</span><span class="p">(</span><span class="n">_</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10componentsACx_tcSlRzSS7ElementRtzlufc"></a>
+                    <a name="//apple_ref/swift/Method/init(components:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10componentsACx_tcSlRzSS7ElementRtzlufc">init(components:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">components</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Collection</span><span class="p">,</span> <span class="kt">T</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV13lastComponentSSvp"></a>
+                    <a name="//apple_ref/swift/Property/lastComponent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV13lastComponentSSvp">lastComponent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">lastComponent</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV21deletingLastComponentACvp"></a>
+                    <a name="//apple_ref/swift/Property/deletingLastComponent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV21deletingLastComponentACvp">deletingLastComponent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deletingLastComponent</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV18appendingComponentyACSSF"></a>
+                    <a name="//apple_ref/swift/Method/appendingComponent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV18appendingComponentyACSSF">appendingComponent(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appendingComponent</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV22replacingLastComponent4withACSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/replacingLastComponent(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV22replacingLastComponent4withACSS_tF">replacingLastComponent(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replacingLastComponent</span><span class="p">(</span><span class="n">with</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV9extensionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/extension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV9extensionSSvp">extension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">var</span> <span class="p">`</span><span class="nv">extension</span><span class="p">`:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV17deletingExtensionACvp"></a>
+                    <a name="//apple_ref/swift/Property/deletingExtension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV17deletingExtensionACvp">deletingExtension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deletingExtension</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV18appendingExtensionyACSSF"></a>
+                    <a name="//apple_ref/swift/Method/appendingExtension(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV18appendingExtensionyACSSF">appendingExtension(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appendingExtension</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV18replacingExtension4withACSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/replacingExtension(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV18replacingExtension4withACSS_tF">replacingExtension(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replacingExtension</span><span class="p">(</span><span class="n">with</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Path</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV17excludeFromBackupyyKF"></a>
+                    <a name="//apple_ref/swift/Method/excludeFromBackup()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV17excludeFromBackupyyKF">excludeFromBackup()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Note: No-op if file does not exist.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">excludeFromBackup</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV6existsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/exists" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV6existsSbvp">exists</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">exists</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV12doesNotExistSbvp"></a>
+                    <a name="//apple_ref/swift/Property/doesNotExist" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV12doesNotExistSbvp">doesNotExist</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">doesNotExist</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV6isFileSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isFile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV6isFileSbvp">isFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isFile</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV11isDirectorySbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV11isDirectorySbvp">isDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDirectory</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV11isDeletableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isDeletable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV11isDeletableSbvp">isDeletable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isDeletable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV12isExecutableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isExecutable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV12isExecutableSbvp">isExecutable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isExecutable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10isReadableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isReadable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10isReadableSbvp">isReadable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isReadable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV10isWritableSbvp"></a>
+                    <a name="//apple_ref/swift/Property/isWritable" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV10isWritableSbvp">isWritable</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isWritable</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV19contentsOfDirectory9fullPathsSayACGSb_tKF"></a>
+                    <a name="//apple_ref/swift/Method/contentsOfDirectory(fullPaths:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV19contentsOfDirectory9fullPathsSayACGSb_tKF">contentsOfDirectory(fullPaths:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">contentsOfDirectory</span><span class="p">(</span><span class="nv">fullPaths</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">Path</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV16currentDirectoryACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/currentDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV16currentDirectoryACvpZ">currentDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">currentDirectory</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV13homeDirectoryACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/homeDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV13homeDirectoryACSgvpZ">homeDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">homeDirectory</span><span class="p">:</span> <span class="kt">Path</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV17documentDirectoryACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/documentDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV17documentDirectoryACSgvpZ">documentDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">documentDirectory</span><span class="p">:</span> <span class="kt">Path</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV15cachesDirectoryACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/cachesDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV15cachesDirectoryACvpZ">cachesDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">cachesDirectory</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV27applicationSupportDirectoryACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/applicationSupportDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV27applicationSupportDirectoryACvpZ">applicationSupportDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The application support directory typically does not exist at first.
+You need to create it if it doesn&rsquo;t exist. The getter of this variable
+will try to append the app bundle identifier to the path as recommended
+by Apple.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">applicationSupportDirectory</span><span class="p">:</span> <span class="kt">Path</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV18downloadsDirectoryACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/downloadsDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV18downloadsDirectoryACSgvpZ">downloadsDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">downloadsDirectory</span><span class="p">:</span> <span class="kt">Path</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV16desktopDirectoryACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/desktopDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV16desktopDirectoryACSgvpZ">desktopDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">desktopDirectory</span><span class="p">:</span> <span class="kt">Path</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV21applicationsDirectoryACSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/applicationsDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV21applicationsDirectoryACSgvpZ">applicationsDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">applicationsDirectory</span><span class="p">:</span> <span class="kt">Path</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV22becomeCurrentDirectoryyyF"></a>
+                    <a name="//apple_ref/swift/Method/becomeCurrentDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV22becomeCurrentDirectoryyyF">becomeCurrentDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">becomeCurrentDirectory</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV15createDirectory27withIntermediateDirectories10attributesySb_SDySo18NSFileAttributeKeyaypGSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/createDirectory(withIntermediateDirectories:attributes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV15createDirectory27withIntermediateDirectories10attributesySb_SDySo18NSFileAttributeKeyaypGSgtKF">createDirectory(withIntermediateDirectories:attributes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createDirectory</span><span class="p">(</span><span class="n">withIntermediateDirectories</span> <span class="nv">createIntermediateDirectories</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span> <span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">FileAttributeKey</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV6removeyyKF"></a>
+                    <a name="//apple_ref/swift/Method/remove()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV6removeyyKF">remove()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">remove</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV4copy2toyAC_tKF"></a>
+                    <a name="//apple_ref/swift/Method/copy(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV4copy2toyAC_tKF">copy(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">to</span> <span class="nv">toPath</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV4copy2toySS_tKF"></a>
+                    <a name="//apple_ref/swift/Method/copy(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV4copy2toySS_tKF">copy(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">to</span> <span class="nv">toPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV4copy2toy10Foundation3URLV_tKF"></a>
+                    <a name="//apple_ref/swift/Method/copy(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV4copy2toy10Foundation3URLV_tKF">copy(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">copy</span><span class="p">(</span><span class="n">to</span> <span class="nv">toURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV11safeReplace10withItemAt10Foundation3URLVSgAC_tKF"></a>
+                    <a name="//apple_ref/swift/Method/safeReplace(withItemAt:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV11safeReplace10withItemAt10Foundation3URLVSgAC_tKF">safeReplace(withItemAt:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">safeReplace</span><span class="p">(</span><span class="n">withItemAt</span> <span class="nv">itemPath</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit4PathV19setPosixPermissionsyySiKF"></a>
+                    <a name="//apple_ref/swift/Method/setPosixPermissions(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit4PathV19setPosixPermissionsyySiKF">setPosixPermissions(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set POSIX file permissions. Same as chmod. Octal number is recommended.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">setPosixPermissions</span><span class="p">(</span><span class="n">_</span> <span class="nv">permissions</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Object%20Description"></a>
+                <a name="//apple_ref/swift/Section/Object Description" class="dashAnchor"></a>
+                <a href="#/Object%20Description">
+                  <h3 class="section-name">Object Description</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s23CustomStringConvertibleP11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s23CustomStringConvertibleP11descriptionSSvp">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/String%20Literal%20Convertible"></a>
+                <a name="//apple_ref/swift/Section/String Literal Convertible" class="dashAnchor"></a>
+                <a href="#/String%20Literal%20Convertible">
+                  <h3 class="section-name">String Literal Convertible</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4TypeQa"></a>
+                    <a name="//apple_ref/swift/Alias/UnicodeScalarLiteralType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4TypeQa">UnicodeScalarLiteralType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UnicodeScalarLiteralType</span> <span class="o">=</span> <span class="kt">StringLiteralType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4TypeQa"></a>
+                    <a name="//apple_ref/swift/Alias/ExtendedGraphemeClusterLiteralType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4TypeQa">ExtendedGraphemeClusterLiteralType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ExtendedGraphemeClusterLiteralType</span> <span class="o">=</span> <span class="kt">StringLiteralType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s33ExpressibleByUnicodeScalarLiteralP07unicodedE0x0cdE4TypeQz_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(unicodeScalarLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s33ExpressibleByUnicodeScalarLiteralP07unicodedE0x0cdE4TypeQz_tcfc">init(unicodeScalarLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">unicodeScalarLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Structs/Path.html#/s:s33ExpressibleByUnicodeScalarLiteralP0cdE4TypeQa">UnicodeScalarLiteralType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s43ExpressibleByExtendedGraphemeClusterLiteralP08extendeddeF0x0cdeF4TypeQz_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(extendedGraphemeClusterLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s43ExpressibleByExtendedGraphemeClusterLiteralP08extendeddeF0x0cdeF4TypeQz_tcfc">init(extendedGraphemeClusterLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">extendedGraphemeClusterLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Structs/Path.html#/s:s43ExpressibleByExtendedGraphemeClusterLiteralP0cdeF4TypeQa">ExtendedGraphemeClusterLiteralType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:s26ExpressibleByStringLiteralP06stringD0x0cD4TypeQz_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:s26ExpressibleByStringLiteralP06stringD0x0cD4TypeQz_tcfc">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">StringLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hashable,%20Equatable,%20Comparable"></a>
+                <a name="//apple_ref/swift/Section/Hashable, Equatable, Comparable" class="dashAnchor"></a>
+                <a href="#/Hashable,%20Equatable,%20Comparable">
+                  <h3 class="section-name">Hashable, Equatable, Comparable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SH4hash4intoys6HasherVz_tF"></a>
+                    <a name="//apple_ref/swift/Method/hash(into:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SH4hash4intoys6HasherVz_tF">hash(into:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">hash</span><span class="p">(</span><span class="n">into</span> <span class="nv">hasher</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Hasher</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hashable,%20Equatable,%20Comparable2"></a>
+                <a name="//apple_ref/swift/Section/Hashable, Equatable, Comparable" class="dashAnchor"></a>
+                <a href="#/Hashable,%20Equatable,%20Comparable2">
+                  <h3 class="section-name">Hashable, Equatable, Comparable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SQ2eeoiySbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SQ2eeoiySbx_xtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hashable,%20Equatable,%20Comparable3"></a>
+                <a name="//apple_ref/swift/Section/Hashable, Equatable, Comparable" class="dashAnchor"></a>
+                <a href="#/Hashable,%20Equatable,%20Comparable3">
+                  <h3 class="section-name">Hashable, Equatable, Comparable</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SL1loiySbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/&lt;(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SL1loiySbx_xtFZ">&lt;(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">&lt;</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Path</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Console Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Console" class="dashAnchor"></a>
+    <a title="Console Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (14% documented)</p>
+        <p class="header-right"><a href="https://github.com/apparata/"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Console Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/CommandFlag.html">CommandFlag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandLineParser.html">CommandLineParser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOption.html">CommandOption</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandOptionalInput.html">CommandOptionalInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandRequiredInput.html">CommandRequiredInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandUsage.html">CommandUsage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CommandVariadicInput.html">CommandVariadicInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Console.html">Console</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Environment.html">Environment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutableFinder.html">ExecutableFinder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Execution.html">Execution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ExecutionMode.html">ExecutionMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LineReader.html">LineReader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardBaseOutput.html">StandardBaseOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit13StandardErrorC">StandardError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardIO.html">StandardIO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/StandardInput.html">StandardInput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:6CLIKit14StandardOutputC">StandardOutput</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess.html">Subprocess</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Subprocess/State.html">– State</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SubprocessResult.html">SubprocessResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Terminal.html">Terminal</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/enabledLogLevels">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit16enabledLogLevelsAA07EnabledcD0Vvp">enabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Global Variables.html#/s:6CLIKit9moduleLogSo9OS_os_logCSgvp">moduleLog</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CommandInputType.html">CommandInputType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/CommandLineError.html">CommandLineError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/StandardEnvironmentVariable.html">StandardEnvironmentVariable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SubprocessError.html">SubprocessError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode.html">TerminalCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearScreen.html">– ClearScreen</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ClearLine.html">– ClearLine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/TextStyle.html">– TextStyle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalCode/ExtendedColor.html">– ExtendedColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TerminalType.html">TerminalType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Optional.html">Optional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Regex.html">Regex</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_ADtF">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:6CLIKit1poiyAA4PathVAD_SStF">+(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Command.html">Command</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentSpecification.html">CommandArgumentSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandArgumentValue.html">CommandArgumentValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandFlagSpecification.html">CommandFlagSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandInputSpecification.html">CommandInputSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CommandOptionSpecification.html">CommandOptionSpecification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Commands.html">Commands</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/IO.html">IO</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Input.html">Input</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/WrapsFileHandle.html">WrapsFileHandle</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/EnabledLogLevels.html">EnabledLogLevels</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Path.html">Path</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString.html">TerminalString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/Fragment.html">– Fragment</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TerminalString/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Console</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Console</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC8standardAA10StandardIOCvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/standard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC8standardAA10StandardIOCvpZ">standard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">standard</span><span class="p">:</span> <span class="kt"><a href="../Classes/StandardIO.html">StandardIO</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10lineReaderAA04LineD0CvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/lineReader" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10lineReaderAA04LineD0CvpZ">lineReader</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">lineReader</span><span class="p">:</span> <span class="kt"><a href="../Classes/LineReader.html">LineReader</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC12terminalTypeAA08TerminalD0OvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/terminalType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC12terminalTypeAA08TerminalD0OvpZ">terminalType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">terminalType</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalType.html">TerminalType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC17errorTerminalTypeAA0dE0OvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/errorTerminalType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC17errorTerminalTypeAA0dE0OvpZ">errorTerminalType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">errorTerminalType</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalType.html">TerminalType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Read"></a>
+                <a name="//apple_ref/swift/Section/Read" class="dashAnchor"></a>
+                <a href="#/Read">
+                  <h3 class="section-name">Read</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC8readLineSSSgyFZ"></a>
+                    <a name="//apple_ref/swift/Method/readLine()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC8readLineSSSgyFZ">readLine()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">readLine</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Write"></a>
+                <a name="//apple_ref/swift/Section/Write" class="dashAnchor"></a>
+                <a href="#/Write">
+                  <h3 class="section-name">Write</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5writeyySSFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5writeyySSFZ">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeErroryySSFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeErroryySSFZ">writeError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC9writeLineyySSFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeLine(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC9writeLineyySSFZ">writeLine(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeLine</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC14writeLineErroryySSFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeLineError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC14writeLineErroryySSFZ">writeLineError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeLineError</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5write14terminalStringyAA08TerminalE0V_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(terminalString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5write14terminalStringyAA08TerminalE0V_tFZ">write(terminalString:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="nv">terminalString</span><span class="p">:</span> <span class="kt"><a href="../Structs/TerminalString.html">TerminalString</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeError14terminalStringyAA08TerminalF0V_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(terminalString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeError14terminalStringyAA08TerminalF0V_tFZ">writeError(terminalString:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="nv">terminalString</span><span class="p">:</span> <span class="kt"><a href="../Structs/TerminalString.html">TerminalString</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5printyyAA14TerminalStringVFZ"></a>
+                    <a name="//apple_ref/swift/Method/print(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5printyyAA14TerminalStringVFZ">print(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">print</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt"><a href="../Structs/TerminalString.html">TerminalString</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10printErroryyAA14TerminalStringVFZ"></a>
+                    <a name="//apple_ref/swift/Method/printError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10printErroryyAA14TerminalStringVFZ">printError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">printError</span><span class="p">(</span><span class="n">_</span> <span class="nv">string</span><span class="p">:</span> <span class="kt"><a href="../Structs/TerminalString.html">TerminalString</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Write%20Terminal%20Code"></a>
+                <a name="//apple_ref/swift/Section/Write Terminal Code" class="dashAnchor"></a>
+                <a href="#/Write%20Terminal%20Code">
+                  <h3 class="section-name">Write Terminal Code</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO11ClearScreenOFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO11ClearScreenOFZ">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ClearScreen</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO11ClearScreenOFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO11ClearScreenOFZ">writeError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ClearScreen</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO9ClearLineOFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO9ClearLineOFZ">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ClearLine</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO9ClearLineOFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO9ClearLineOFZ">writeError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ClearLine</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO9TextStyleOFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO9TextStyleOFZ">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">TextStyle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO9TextStyleOFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO9TextStyleOFZ">writeError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">TextStyle</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO13ExtendedColorOFZ"></a>
+                    <a name="//apple_ref/swift/Method/write(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5writeyyAA12TerminalCodeO13ExtendedColorOFZ">write(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">write</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ExtendedColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO13ExtendedColorOFZ"></a>
+                    <a name="//apple_ref/swift/Method/writeError(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10writeErroryyAA12TerminalCodeO13ExtendedColorOFZ">writeError(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">writeError</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt"><a href="../Enums/TerminalCode.html">TerminalCode</a></span><span class="o">.</span><span class="kt">ExtendedColor</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Convenience"></a>
+                <a name="//apple_ref/swift/Section/Convenience" class="dashAnchor"></a>
+                <a href="#/Convenience">
+                  <h3 class="section-name">Convenience</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC3ask8question7defaultSSSgSS_AGtFZ"></a>
+                    <a name="//apple_ref/swift/Method/ask(question:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC3ask8question7defaultSSSgSS_AGtFZ">ask(question:default:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">ask</span><span class="p">(</span><span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">default</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC14confirmYesOrNo8question7defaultSbSgSS_SbtFZ"></a>
+                    <a name="//apple_ref/swift/Method/confirmYesOrNo(question:default:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC14confirmYesOrNo8question7defaultSbSgSS_SbtFZ">confirmYesOrNo(question:default:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">confirmYesOrNo</span><span class="p">(</span><span class="nv">question</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">default</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Clear"></a>
+                <a name="//apple_ref/swift/Section/Clear" class="dashAnchor"></a>
+                <a href="#/Clear">
+                  <h3 class="section-name">Clear</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5clearyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/clear()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5clearyyFZ">clear()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10clearErroryyFZ"></a>
+                    <a name="//apple_ref/swift/Method/clearError()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10clearErroryyFZ">clearError()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">clearError</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC9clearLineyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/clearLine()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC9clearLineyyFZ">clearLine()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">clearLine</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC14clearLineErroryyFZ"></a>
+                    <a name="//apple_ref/swift/Method/clearLineError()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC14clearLineErroryyFZ">clearLineError()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">clearLineError</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Flush"></a>
+                <a name="//apple_ref/swift/Section/Flush" class="dashAnchor"></a>
+                <a href="#/Flush">
+                  <h3 class="section-name">Flush</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC5flushyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/flush()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC5flushyyFZ">flush()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flush</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6CLIKit7ConsoleC10flushErroryyFZ"></a>
+                    <a name="//apple_ref/swift/Method/flushError()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6CLIKit7ConsoleC10flushErroryyFZ">flushError()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">flushError</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-08)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
