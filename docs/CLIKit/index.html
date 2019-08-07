@@ -64,6 +64,9 @@
                 <a href="Classes/Execution.html">Execution</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/Execution/SignalType.html">– SignalType</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ExecutionMode.html">ExecutionMode</a>
               </li>
               <li class="nav-group-task">
@@ -261,32 +264,205 @@ command line tools in Swift.</p>
 
 <p>Add CLIKit to your Swift package by adding the following to your <code>Package.swift</code> file in
 the dependencies array:</p>
-<pre class="highlight plaintext"><code>.package(url: "https://github.com/apparata/CLIKit.git", from: "0.1.0")
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/apparata/CLIKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.1.0"</span><span class="p">)</span>
 </code></pre>
 
 <p>If you are using Xcode 11 or newer, you can add CLIKit by entering the URL to the
 repository via the <code>File</code> menu:</p>
 <pre class="highlight plaintext"><code>File &gt; Swift Packages &gt; Add Package Dependency...
 </code></pre>
+
+<p><strong>Note:</strong> CLIKit requires <strong>Swift 5.1</strong> or later.</p>
 <h2 id='command-line-parser' class='heading'>Command Line Parser</h2>
 
 <p>Example of a command definition:</p>
-<pre class="highlight plaintext"><code>class FibonacciCommand: Command {
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">FibonacciCommand</span><span class="p">:</span> <span class="kt">Command</span> <span class="p">{</span>
 
-    let description = "Calculate fibonacci numbers"
+    <span class="k">let</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">"Calculate fibonacci numbers"</span>
 
-    @CommandFlag(short: "v", description: "Prints verbose output")
-    var verbose: Bool
+    <span class="kd">@CommandFlag(short: "v", description: "Prints verbose output")</span>
+    <span class="k">var</span> <span class="nv">verbose</span><span class="p">:</span> <span class="kt">Bool</span>
 
-    @CommandOption(short: "i", default: 5, regex: #"^\d+$"#,
-                   description: "Number of iterations to perform.")
-    var iterations: Int
+    <span class="kd">@CommandOption(short: "i", default: 5, regex: #"^\d+$"#,
+                   description: "Number of iterations to perform.")</span>
+    <span class="k">var</span> <span class="nv">iterations</span><span class="p">:</span> <span class="kt">Int</span>
 
-    func run() {
-        let result = fibonacci(iterations, printSteps: verbose)
-        print("Result: \(result)")
-    }
-}
+    <span class="kd">func</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">iterations</span><span class="p">,</span> <span class="nv">printSteps</span><span class="p">:</span> <span class="n">verbose</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Result: </span><span class="se">\(</span><span class="n">result</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Example of running the parser on the executable arguments and then runing the
+command handler after the command has been parsed:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">command</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">CommandLineParser</span><span class="p">()</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="kt">FibonacciCommand</span><span class="p">())</span>
+<span class="k">try</span> <span class="n">command</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
+</code></pre>
+
+<p>If the binary is called <code>fibonacci</code>, the command can be run like this in a shell:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>fibonacci <span class="nt">-i</span> 4
+</code></pre>
+
+<p>Several commands can be grouped together as subcommands:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MathCommand</span><span class="p">:</span> <span class="kt">Commands</span> <span class="p">{</span>
+
+    <span class="k">let</span> <span class="nv">description</span> <span class="o">=</span> <span class="s">"Perform math operations"</span>
+
+    <span class="k">let</span> <span class="nv">fibonacci</span> <span class="o">=</span> <span class="kt">FibonacciCommand</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">factorize</span> <span class="o">=</span> <span class="kt">FactorizeCommand</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">sum</span> <span class="o">=</span> <span class="kt">SumCommand</span><span class="p">()</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Example of running the parser on the executable arguments and then runing the
+command handler after the command has been parsed:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">command</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">CommandLineParser</span><span class="p">()</span><span class="o">.</span><span class="nf">parse</span><span class="p">(</span><span class="kt">MathCommand</span><span class="p">())</span>
+<span class="k">try</span> <span class="n">command</span><span class="o">.</span><span class="nf">run</span><span class="p">()</span>
+</code></pre>
+
+<p>If the binary is called <code>math</code>, the <code>fibonacci</code> subcommand can be run like this in a shell:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>math fibonacci <span class="nt">-i</span> 4
+</code></pre>
+<h2 id='subprocesses' class='heading'>Subprocesses</h2>
+
+<p>Example of launching a subprocess and capturing its output:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">CLIKit</span>
+
+<span class="c1">// Search for Swift in using PATH environment variable.</span>
+<span class="k">guard</span> <span class="k">let</span> <span class="nv">path</span> <span class="o">=</span> <span class="kt">ExecutableFinder</span><span class="o">.</span><span class="nf">find</span><span class="p">(</span><span class="s">"swift"</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Didn't find swift, exiting."</span><span class="p">)</span>
+    <span class="nf">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">do</span> <span class="p">{</span>
+    <span class="c1">// Launch Swift as a subprocess and capture its output.</span>
+    <span class="k">let</span> <span class="nv">subprocess</span> <span class="o">=</span> <span class="kt">Subprocess</span><span class="p">(</span><span class="nv">executable</span><span class="p">:</span> <span class="n">path</span><span class="p">,</span>
+                                <span class="nv">arguments</span><span class="p">:</span> <span class="p">[</span><span class="s">"-h"</span><span class="p">],</span>
+                                <span class="nv">captureOutput</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+    <span class="k">try</span> <span class="n">subprocess</span><span class="o">.</span><span class="nf">spawn</span><span class="p">()</span>
+
+    <span class="c1">// Wait for the process to finish.</span>
+    <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="k">try</span> <span class="n">subprocess</span><span class="o">.</span><span class="nf">wait</span><span class="p">()</span>
+
+    <span class="c1">// Print the captured output from the subprocess.</span>
+    <span class="nf">print</span><span class="p">(</span><span class="k">try</span> <span class="n">result</span><span class="o">.</span><span class="nf">capturedOutputString</span><span class="p">())</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">dump</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>    
+<span class="p">}</span>
+</code></pre>
+<h2 id='terminal-output' class='heading'>Terminal Output</h2>
+
+<p>Example of using the <code><a href="Structs/TerminalString.html">TerminalString</a></code> struct to print a string with ANSI terminal codes:</p>
+<pre class="highlight swift"><code><span class="kt">Console</span><span class="o">.</span><span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="o">.</span><span class="n">green</span><span class="se">)</span><span class="s">This is green.</span><span class="se">\(</span><span class="o">.</span><span class="n">reset</span><span class="se">)\(</span><span class="o">.</span><span class="n">bold</span><span class="se">)</span><span class="s">This is bold.</span><span class="se">\(</span><span class="o">.</span><span class="n">reset</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+</code></pre>
+
+<p>If the console is a <q>dumb</q> terminal or the Xcode console, the ANSI terminal codes will be
+filtered out.</p>
+
+<p>The <code><a href="Classes/Console.html">Console</a></code> class has a few convenience methods for console input and output:</p>
+<pre class="highlight swift"><code><span class="k">if</span> <span class="kt">Console</span><span class="o">.</span><span class="nf">confirmYesOrNo</span><span class="p">(</span><span class="nv">question</span><span class="p">:</span> <span class="s">"Clear the screen?"</span><span class="p">,</span> <span class="k">default</span><span class="p">:</span> <span class="kc">false</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Clear the screen.</span>
+    <span class="kt">Console</span><span class="o">.</span><span class="nf">clear</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// Do not clear the screen.</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='execution' class='heading'>Execution</h2>
+
+<p>Command line programs usually end when there is no more code to run on the main 
+thread. To do asynchronous work, such as network requests, or running code on a
+dispatch queue, a runloop needs to be started. The <code>runUntilTerminated()</code> method
+of the <code><a href="Classes/Execution.html">Execution</a></code> class can be used to start a runloop that will run until the program is terminated, either programmatically using <code>exit()</code> or similar, or explicitly terminated
+by the system, e.g. if the user presses Ctrl-C.</p>
+
+<p>Example:</p>
+<pre class="highlight swift"><code><span class="kt">Execution</span><span class="o">.</span><span class="nf">runUntilTerminated</span><span class="p">()</span>
+</code></pre>
+
+<p>There is an optional closure parameter to handle any necessary cleanup when the
+program is terminated. The closure is called if the process receives <code>SIGINT</code> (typically if 
+the user presses Ctrl-C) or <code>SIGTERM</code>.</p>
+
+<p>Example:</p>
+<pre class="highlight swift"><code><span class="kt">Execution</span><span class="o">.</span><span class="n">runUntilTerminated</span> <span class="p">{</span> <span class="n">signal</span> <span class="k">in</span> 
+
+    <span class="k">switch</span> <span class="n">signal</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">terminate</span><span class="p">:</span>
+        <span class="c1">// Do any necessary cleanup here.</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Return true to allow the system to handle the SIGTERM signal.</span>
+        <span class="k">return</span> <span class="kc">true</span>
+
+    <span class="k">case</span> <span class="o">.</span><span class="nv">interrupt</span><span class="p">:</span>
+        <span class="c1">// Do any necessary cleanup here.</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Return false to suppress the SIGINT signal.</span>
+        <span class="c1">// This will not allow Ctrl-C to terminate the program.</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<h2 id='path' class='heading'>Path</h2>
+
+<p>CLIKit contains a <code><a href="Structs/Path.html">Path</a></code> struct that makes working with file system paths easier.</p>
+
+<p>Examples:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">absolutePath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/usr/bin/zip"</span><span class="p">)</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isAbsolute</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isRelative</span>
+
+<span class="k">let</span> <span class="nv">relativePath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"bin/whatever"</span><span class="p">)</span>
+<span class="n">relativePath</span><span class="o">.</span><span class="n">isAbsolute</span>
+<span class="n">relativePath</span><span class="o">.</span><span class="n">isRelative</span>
+
+<span class="k">let</span> <span class="nv">concatenatedPath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/usr"</span><span class="p">)</span> <span class="o">+</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/bin"</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">messyPath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"//usr/../usr/local/bin/./whatever"</span><span class="p">)</span>
+<span class="n">messyPath</span><span class="o">.</span><span class="n">normalized</span>
+
+<span class="k">let</span> <span class="nv">pathFromLiteralString</span><span class="p">:</span> <span class="kt">Path</span> <span class="o">=</span> <span class="s">"/this/is/a/path"</span>
+<span class="k">let</span> <span class="nv">pathFromEmptyString</span><span class="p">:</span> <span class="kt">Path</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">let</span> <span class="nv">pathFromConcatenatedStrings</span><span class="p">:</span> <span class="kt">Path</span> <span class="o">=</span> <span class="s">"/usr"</span> <span class="o">+</span> <span class="s">"/bin"</span>
+
+<span class="k">let</span> <span class="nv">pathFromComponents</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="nv">components</span><span class="p">:</span> <span class="p">[</span><span class="s">"/"</span><span class="p">,</span> <span class="s">"usr/"</span><span class="p">,</span> <span class="s">"bin"</span><span class="p">,</span> <span class="s">"/"</span><span class="p">,</span> <span class="s">"swift"</span><span class="p">])</span>
+<span class="k">let</span> <span class="nv">pathFromEmptyComponents</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="nv">components</span><span class="p">:</span> <span class="p">[])</span>
+
+<span class="k">let</span> <span class="nv">appendedPath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/usr/local"</span><span class="p">)</span><span class="o">.</span><span class="nf">appendingComponent</span><span class="p">(</span><span class="s">"bin"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">appendedPath3</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/usr/local"</span><span class="p">)</span><span class="o">.</span><span class="nf">appending</span><span class="p">(</span><span class="kt">Path</span><span class="p">(</span><span class="s">"bin"</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">appendedPath2</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"/usr/local"</span><span class="p">)</span> <span class="o">+</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"bin"</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">imagePath</span> <span class="o">=</span> <span class="kt">Path</span><span class="p">(</span><span class="s">"photos/photo"</span><span class="p">)</span><span class="o">.</span><span class="nf">appendingExtension</span><span class="p">(</span><span class="s">"jpg"</span><span class="p">)</span>
+<span class="n">imagePath</span><span class="o">.</span><span class="kd">extension</span>
+
+<span class="k">let</span> <span class="nv">imagePathWithoutExtension</span> <span class="o">=</span> <span class="n">imagePath</span><span class="o">.</span><span class="n">deletingExtension</span>
+<span class="k">let</span> <span class="nv">imagePathWithoutLastComponent</span> <span class="o">=</span> <span class="n">imagePath</span><span class="o">.</span><span class="n">deletingLastComponent</span>
+
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">exists</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isFile</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isDirectory</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isDeletable</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isExecutable</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isReadable</span>
+<span class="n">absolutePath</span><span class="o">.</span><span class="n">isWritable</span>
+
+<span class="c1">// Return an array of Path objects representing files in the current directory.</span>
+<span class="k">let</span> <span class="nv">filesInDirectory</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Path</span><span class="o">.</span><span class="n">currentDirectory</span><span class="o">.</span><span class="n">contentsOfDirectory</span>
+
+<span class="c1">// Change directory to the user's home directory</span>
+<span class="kt">Path</span><span class="o">.</span><span class="n">homeDirectory</span><span class="p">?</span><span class="o">.</span><span class="nf">becomeCurrentDirectory</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">desktop</span> <span class="o">=</span> <span class="kt">Path</span><span class="o">.</span><span class="n">desktopDirectory</span> <span class="p">{</span>
+    <span class="kt">Path</span><span class="p">(</span><span class="s">"/path/myfile.txt"</span><span class="p">)</span><span class="o">.</span><span class="nf">copy</span><span class="p">(</span><span class="nv">to</span><span class="p">:</span> <span class="n">desktop</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">desktop</span><span class="o">.</span><span class="nf">appendingComponent</span><span class="p">(</span><span class="s">"myfile.txt"</span><span class="p">)</span><span class="o">.</span><span class="nf">remove</span><span class="p">()</span>
+
+<span class="nf">try</span> <span class="p">(</span><span class="n">desktop</span> <span class="o">+</span> <span class="s">"My Folder"</span><span class="p">)</span><span class="o">.</span><span class="nf">createDirectory</span><span class="p">()</span>
+
+<span class="kt">Path</span><span class="p">(</span><span class="s">"/path/myscript.sh"</span><span class="p">)</span><span class="o">.</span><span class="nf">setPosixPermissions</span><span class="p">(</span><span class="mi">0</span><span class="n">o700</span><span class="p">)</span>
 </code></pre>
 
           </section>

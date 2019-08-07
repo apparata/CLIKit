@@ -778,6 +778,27 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/Execution.swift",
+      "line": 9,
+      "symbol": "Execution.SignalType",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/Execution.swift",
+      "line": 10,
+      "symbol": "Execution.SignalType.interrupt",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/Execution.swift",
+      "line": 11,
+      "symbol": "Execution.SignalType.terminate",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/ExecutionMode.swift",
       "line": 7,
       "symbol": "ExecutionMode",

@@ -14,7 +14,7 @@ CLIKit is released under the MIT license. See `LICENSE` file for more detailed i
 Add CLIKit to your Swift package by adding the following to your `Package.swift` file in
 the dependencies array:
 
-```Swift
+```swift
 .package(url: "https://github.com/apparata/CLIKit.git", from: "0.1.0")
 ```
 If you are using Xcode 11 or newer, you can add CLIKit by entering the URL to the
@@ -24,11 +24,13 @@ repository via the `File` menu:
 File > Swift Packages > Add Package Dependency...
 ```
 
+**Note:** CLIKit requires **Swift 5.1** or later.
+
 ## Command Line Parser
 
 Example of a command definition:
 
-```Swift
+```swift
 class FibonacciCommand: Command {
     
     let description = "Calculate fibonacci numbers"
@@ -47,11 +49,52 @@ class FibonacciCommand: Command {
 }
 ```
 
+Example of running the parser on the executable arguments and then runing the
+command handler after the command has been parsed:
+
+```swift
+let command = try CommandLineParser().parse(FibonacciCommand())
+try command.run()
+```
+
+If the binary is called `fibonacci`, the command can be run like this in a shell:
+
+```bash
+$ fibonacci -i 4
+```
+
+Several commands can be grouped together as subcommands:
+
+```swift
+class MathCommand: Commands {
+    
+    let description = "Perform math operations"
+    
+    let fibonacci = FibonacciCommand()
+    let factorize = FactorizeCommand()
+    let sum = SumCommand()
+}
+```
+
+Example of running the parser on the executable arguments and then runing the
+command handler after the command has been parsed:
+
+```swift
+let command = try CommandLineParser().parse(MathCommand())
+try command.run()
+```
+
+If the binary is called `math`, the `fibonacci` subcommand can be run like this in a shell:
+
+```bash
+$ math fibonacci -i 4
+```
+
 ## Subprocesses
 
 Example of launching a subprocess and capturing its output:
 
-```Swift
+```swift
 import CLIKit
 
 // Search for Swift in using PATH environment variable.
@@ -81,7 +124,7 @@ do {
 
 Example of using the `TerminalString` struct to print a string with ANSI terminal codes:
 
-```Swift
+```swift
 Console.print("\(.green)This is green.\(.reset)\(.bold)This is bold.\(.reset)")
 ```
 
@@ -90,7 +133,7 @@ filtered out.
 
 The `Console` class has a few convenience methods for console input and output:
 
-```Swift
+```swift
 if Console.confirmYesOrNo(question: "Clear the screen?", default: false) {
     // Clear the screen.
     Console.clear()
@@ -109,7 +152,7 @@ by the system, e.g. if the user presses Ctrl-C.
 
 Example:
 
-```Swift
+```swift
 Execution.runUntilTerminated()
 ```
 
@@ -119,7 +162,7 @@ the user presses Ctrl-C) or `SIGTERM`.
 
 Example:
 
-```Swift
+```swift
 Execution.runUntilTerminated { signal in 
 
     switch signal {
@@ -139,4 +182,66 @@ Execution.runUntilTerminated { signal in
         return false
     }
 }
+```
+
+## Path
+
+CLIKit contains a `Path` struct that makes working with file system paths easier.
+
+Examples:
+
+```swift
+let absolutePath = Path("/usr/bin/zip")
+absolutePath.isAbsolute
+absolutePath.isRelative
+
+let relativePath = Path("bin/whatever")
+relativePath.isAbsolute
+relativePath.isRelative
+
+let concatenatedPath = Path("/usr") + Path("/bin")
+
+let messyPath = Path("//usr/../usr/local/bin/./whatever")
+messyPath.normalized
+
+let pathFromLiteralString: Path = "/this/is/a/path"
+let pathFromEmptyString: Path = ""
+let pathFromConcatenatedStrings: Path = "/usr" + "/bin"
+
+let pathFromComponents = Path(components: ["/", "usr/", "bin", "/", "swift"])
+let pathFromEmptyComponents = Path(components: [])
+
+let appendedPath = Path("/usr/local").appendingComponent("bin")
+let appendedPath3 = Path("/usr/local").appending(Path("bin"))
+let appendedPath2 = Path("/usr/local") + Path("bin")
+
+let imagePath = Path("photos/photo").appendingExtension("jpg")
+imagePath.extension
+
+let imagePathWithoutExtension = imagePath.deletingExtension
+let imagePathWithoutLastComponent = imagePath.deletingLastComponent
+
+absolutePath.exists
+absolutePath.isFile
+absolutePath.isDirectory
+absolutePath.isDeletable
+absolutePath.isExecutable
+absolutePath.isReadable
+absolutePath.isWritable
+
+// Return an array of Path objects representing files in the current directory.
+let filesInDirectory = try Path.currentDirectory.contentsOfDirectory
+
+// Change directory to the user's home directory
+Path.homeDirectory?.becomeCurrentDirectory()
+
+if let desktop = Path.desktopDirectory {
+    Path("/path/myfile.txt").copy(to: desktop)
+}
+
+desktop.appendingComponent("myfile.txt").remove()
+
+try (desktop + "My Folder").createDirectory()
+
+Path("/path/myscript.sh").setPosixPermissions(0o700)
 ```
