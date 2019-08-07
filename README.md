@@ -70,7 +70,7 @@ class FibonacciCommand: Command {
 }
 ```
 
-Example of running the parser on the executable arguments and then runing the
+Example of running the parser on the executable arguments and then running the
 command handler after the command has been parsed:
 
 ```swift
