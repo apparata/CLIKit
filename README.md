@@ -118,7 +118,7 @@ Example of launching a subprocess and capturing its output:
 ```swift
 import CLIKit
 
-// Search for Swift in using PATH environment variable.
+// Search for Swift using PATH environment variable.
 guard let path = ExecutableFinder.find("swift") else {
     print("Didn't find swift, exiting.")
     exit(1)
