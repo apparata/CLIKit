@@ -46,3 +46,97 @@ class FibonacciCommand: Command {
     }
 }
 ```
+
+## Subprocesses
+
+Example of launching a subprocess and capturing its output:
+
+```Swift
+import CLIKit
+
+// Search for Swift in using PATH environment variable.
+guard let path = ExecutableFinder.find("swift") else {
+    print("Didn't find swift, exiting.")
+    exit(1)
+}
+
+do {
+    // Launch Swift as a subprocess and capture its output.
+    let subprocess = Subprocess(executable: path,
+                                arguments: ["-h"],
+                                captureOutput: true)
+    try subprocess.spawn()
+
+    // Wait for the process to finish.
+    let result = try subprocess.wait()
+
+    // Print the captured output from the subprocess.
+    print(try result.capturedOutputString())
+} catch {
+    dump(error)    
+}
+```
+
+## Terminal Output
+
+Example of using the `TerminalString` struct to print a string with ANSI terminal codes:
+
+```Swift
+Console.print("\(.green)This is green.\(.reset)\(.bold)This is bold.\(.reset)")
+```
+
+If the console is a "dumb" terminal or the Xcode console, the ANSI terminal codes will be
+filtered out.
+
+The `Console` class has a few convenience methods for console input and output:
+
+```Swift
+if Console.confirmYesOrNo(question: "Clear the screen?", default: false) {
+    // Clear the screen.
+    Console.clear()
+} else {
+    // Do not clear the screen.
+}
+```
+
+## Execution
+
+Command line programs usually end when there is no more code to run on the main 
+thread. To do asynchronous work, such as network requests, or running code on a
+dispatch queue, a runloop needs to be started. The `runUntilTerminated()` method
+of the `Execution` class can be used to start a runloop that will run until the program is terminated, either programmatically using `exit()` or similar, or explicitly terminated
+by the system, e.g. if the user presses Ctrl-C.
+
+Example:
+
+```Swift
+Execution.runUntilTerminated()
+```
+
+There is an optional closure parameter to handle any necessary cleanup when the
+program is terminated. The closure is called if the process receives `SIGINT` (typically if 
+the user presses Ctrl-C) or `SIGTERM`.
+
+Example:
+
+```Swift
+Execution.runUntilTerminated { signal in 
+
+    switch signal {
+    case .terminate:
+        // Do any necessary cleanup here.
+        ...
+        
+        // Return true to allow the system to handle the SIGTERM signal.
+        return true
+        
+    case .interrupt:
+        // Do any necessary cleanup here.
+        ...
+
+        // Return false to suppress the SIGINT signal.
+        // This will not allow Ctrl-C to terminate the program.
+        return false
+    }
+}
+```
