@@ -12,6 +12,7 @@ CLIKit is released under the MIT license. See `LICENSE` file for more detailed i
 # Table of Contents
 
 - [Getting Started](#getting-started)
+- [Reference Documentation](#reference-documentation)
 - [Features](#features)
   - [Command Line Parser](#command-line-parser)
   - [Subprocesses](#subprocesses)
@@ -35,6 +36,11 @@ File > Swift Packages > Add Package Dependency...
 ```
 
 **Note:** CLIKit requires **Swift 5.1** or later.
+
+# Reference Documentation
+
+There is generated [reference documentation](https://apparata.github.io/CLIKit/CLIKit/)
+available.
 
 # Features
 
