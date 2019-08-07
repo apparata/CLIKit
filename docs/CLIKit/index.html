@@ -14,7 +14,7 @@
     <header>
       <div class="content-wrapper">
         <p><a href="index.html"> Docs</a> (14% documented)</p>
-        <p class="header-right"><a href="https://github.com/apparata/"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="https://github.com/apparata/CLIKit"><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -260,7 +260,21 @@ command line tools in Swift.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>CLIKit is released under the MIT license. See <code>LICENSE</code> file for more detailed information.</p>
-<h2 id='getting-started' class='heading'>Getting Started</h2>
+<h1 id='table-of-contents' class='heading'>Table of Contents</h1>
+
+<ul>
+<li><a href="#getting-started">Getting Started</a></li>
+<li><a href="#features">Features</a>
+
+<ul>
+<li><a href="#command-line-parser">Command Line Parser</a></li>
+<li><a href="#subprocesses">Subprocesses</a></li>
+<li><a href="#terminal-output">Terminal Output</a></li>
+<li><a href="#execution">Execution</a></li>
+<li><a href="#path-management">Path Management</a></li>
+</ul></li>
+</ul>
+<h1 id='getting-started' class='heading'>Getting Started</h1>
 
 <p>Add CLIKit to your Swift package by adding the following to your <code>Package.swift</code> file in
 the dependencies array:</p>
@@ -273,6 +287,10 @@ repository via the <code>File</code> menu:</p>
 </code></pre>
 
 <p><strong>Note:</strong> CLIKit requires <strong>Swift 5.1</strong> or later.</p>
+<h1 id='features' class='heading'>Features</h1>
+
+<p>The following sections contain some rudimentary information about the most prominent
+features in CLIKit, along with examples.</p>
 <h2 id='command-line-parser' class='heading'>Command Line Parser</h2>
 
 <p>Example of a command definition:</p>
@@ -405,7 +423,7 @@ the user presses Ctrl-C) or <code>SIGTERM</code>.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<h2 id='path' class='heading'>Path</h2>
+<h2 id='path-management' class='heading'>Path Management</h2>
 
 <p>CLIKit contains a <code><a href="Structs/Path.html">Path</a></code> struct that makes working with file system paths easier.</p>
 

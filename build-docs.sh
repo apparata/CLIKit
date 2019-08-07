@@ -26,7 +26,7 @@ jazzy \
   --sourcekitten-sourcefile CLIKitDocs.json \
   --author Apparata \
   --author_url http://apparata.se \
-  --github_url https://github.com/apparata/$FRAMEWORK_NAME \
+  --github_url https://github.com/apparata/CLIKit \
   --output "docs/CLIKit" \
   --readme "README.md" \
   --source-directory .

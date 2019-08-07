@@ -9,7 +9,17 @@ command line tools in Swift.
 
 CLIKit is released under the MIT license. See `LICENSE` file for more detailed information.
 
-## Getting Started
+# Table of Contents
+
+- [Getting Started](#getting-started)
+- [Features](#features)
+  - [Command Line Parser](#command-line-parser)
+  - [Subprocesses](#subprocesses)
+  - [Terminal Output](#terminal-output)
+  - [Execution](#execution)
+  - [Path Management](#path-management)
+
+# Getting Started
 
 Add CLIKit to your Swift package by adding the following to your `Package.swift` file in
 the dependencies array:
@@ -25,6 +35,11 @@ File > Swift Packages > Add Package Dependency...
 ```
 
 **Note:** CLIKit requires **Swift 5.1** or later.
+
+# Features
+
+The following sections contain some rudimentary information about the most prominent
+features in CLIKit, along with examples.
 
 ## Command Line Parser
 
@@ -184,7 +199,7 @@ Execution.runUntilTerminated { signal in
 }
 ```
 
-## Path
+## Path Management
 
 CLIKit contains a `Path` struct that makes working with file system paths easier.
 
