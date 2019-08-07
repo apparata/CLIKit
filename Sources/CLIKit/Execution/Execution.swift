@@ -6,13 +6,18 @@ import Foundation
 
 public final class Execution {
     
+    public enum SignalType {
+        case interrupt
+        case terminate
+    }
+    
     /// The signal handler is run when either the `SIGINT` or `SIGTERM`
     /// signal is received by the process. It is used to clean up before
     /// exiting the program.
     ///
     /// Returns `true` if the program should exit, or `false` to keep running.
     /// The normal case would be to return `true`.
-    public typealias SignalHandler = () -> Bool
+    public typealias SignalHandler = (SignalType) -> Bool
     
     /// Private singleton instance.
     private static let instance = Execution()
@@ -38,7 +43,7 @@ public final class Execution {
         
         let sigintSource = DispatchSource.makeSignalSource(signal: SIGINT, queue: signalQueue)
         sigintSource.setEventHandler {
-            let shouldExit = handler?() ?? true
+            let shouldExit = handler?(.interrupt) ?? true
             print()
             if shouldExit {
                 exit(0)
@@ -47,7 +52,7 @@ public final class Execution {
         
         let sigtermSource = DispatchSource.makeSignalSource(signal: SIGTERM, queue: signalQueue)
         sigtermSource.setEventHandler {
-            let shouldExit = handler?() ?? true
+            let shouldExit = handler?(.terminate) ?? true
             print()
             if shouldExit {
                 exit(0)
