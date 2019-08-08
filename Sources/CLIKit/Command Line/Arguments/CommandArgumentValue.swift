@@ -9,24 +9,18 @@ public protocol CommandArgumentValue: CustomStringConvertible {
     init(argumentValue: String) throws
 }
 
-extension String: CommandArgumentValue {
-    
+/// Allow Optional to implement CommandArgumentValue for wrapped types that
+/// themselves implement CommandArgumentValue
+extension Optional: CommandArgumentValue where Wrapped: CommandArgumentValue {
+
     public init(argumentValue: String) throws {
-        self = argumentValue
+        self = .some(try Wrapped(argumentValue: argumentValue))
     }
 }
 
-extension Int: CommandArgumentValue {
-    
-    public init(argumentValue: String) throws {
-        guard let value = Int(argumentValue) else {
-            throw CommandLineError.invalidArgumentValueFormat(argumentValue)
-        }
-        self = value
-    }
-}
-
-extension Optional: CustomStringConvertible where Wrapped == Int {
+/// Allow Optional to implement CustomStringConvertbile for wrapped types that
+/// implement CommandArgumentValue
+extension Optional: CustomStringConvertible where Wrapped: CommandArgumentValue {
     public var description: String {
         switch self {
         case .some(let value):
@@ -34,45 +28,5 @@ extension Optional: CustomStringConvertible where Wrapped == Int {
         default:
             return "nil"
         }
-    }
-}
-
-extension Optional: CommandArgumentValue where Wrapped == Int {
-
-    public init(argumentValue: String) throws {
-        guard let value = Int(argumentValue) else {
-            throw CommandLineError.invalidArgumentValueFormat(argumentValue)
-        }
-        self = .some(value)
-    }
-}
-
-extension Int64: CommandArgumentValue {
-    
-    public init(argumentValue: String) throws {
-        guard let value = Int64(argumentValue) else {
-            throw CommandLineError.invalidArgumentValueFormat(argumentValue)
-        }
-        self = value
-    }
-}
-
-extension Float: CommandArgumentValue {
-    
-    public init(argumentValue: String) throws {
-        guard let value = Float(argumentValue) else {
-            throw CommandLineError.invalidArgumentValueFormat(argumentValue)
-        }
-        self = value
-    }
-}
-
-extension Double: CommandArgumentValue {
-    
-    public init(argumentValue: String) throws {
-        guard let value = Double(argumentValue) else {
-            throw CommandLineError.invalidArgumentValueFormat(argumentValue)
-        }
-        self = value
     }
 }
