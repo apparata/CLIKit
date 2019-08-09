@@ -179,7 +179,7 @@ Execution.runUntilTerminated()
 
 There is an optional closure parameter to handle any necessary cleanup when the
 program is terminated. The closure is called if the process receives `SIGINT` (typically if 
-the user presses Ctrl-C) or `SIGTERM`.
+the user presses Ctrl-C), `SIGHUP` (terminal disconnected) or `SIGTERM` (terminate).
 
 Example:
 
@@ -200,6 +200,15 @@ Execution.runUntilTerminated { signal in
 
         // Return false to suppress the SIGINT signal.
         // This will not allow Ctrl-C to terminate the program.
+        return false
+    }
+    
+    case .terminalDisconnected:
+        // Do any necessary cleanup here.
+        ...
+
+        // Return false to suppress the SIGHUP signal.
+        // This will allow the process to run without the terminal.
         return false
     }
 }
