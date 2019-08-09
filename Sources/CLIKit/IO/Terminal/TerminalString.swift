@@ -74,19 +74,7 @@ extension TerminalString: ExpressibleByStringInterpolation {
             fragments.append(.string(literal))
         }
         
-        public mutating func appendInterpolation(_ code: TerminalCode.ClearScreen) {
-            fragments.append(.terminalCode(code.terminalCode))
-        }
-
-        public mutating func appendInterpolation(_ code: TerminalCode.ClearLine) {
-            fragments.append(.terminalCode(code.terminalCode))
-        }
-        
-        public mutating func appendInterpolation(_ code: TerminalCode.TextStyle) {
-            fragments.append(.terminalCode(code.terminalCode))
-        }
-
-        public mutating func appendInterpolation(_ code: TerminalCode.ExtendedColor) {
+        public mutating func appendInterpolation(_ code: TerminalCode) {
             fragments.append(.terminalCode(code.terminalCode))
         }
     }

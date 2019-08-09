@@ -60,38 +60,14 @@ public class Console {
     
     // MARK: - Write Terminal Code
     
-    public static func write(_ code: TerminalCode.ClearScreen) {
+    public static func write(_ code: TerminalCode) {
         write(code.terminalCode)
     }
 
-    public static func writeError(_ code: TerminalCode.ClearScreen) {
+    public static func writeError(_ code: TerminalCode) {
         write(code.terminalCode)
     }
-    
-    public static func write(_ code: TerminalCode.ClearLine) {
-        write(code.terminalCode)
-    }
-
-    public static func writeError(_ code: TerminalCode.ClearLine) {
-        write(code.terminalCode)
-    }
-
-    public static func write(_ code: TerminalCode.TextStyle) {
-        write(code.terminalCode)
-    }
-
-    public static func writeError(_ code: TerminalCode.TextStyle) {
-        write(code.terminalCode)
-    }
-
-    public static func write(_ code: TerminalCode.ExtendedColor) {
-        write(code.terminalCode)
-    }
-
-    public static func writeError(_ code: TerminalCode.ExtendedColor) {
-        write(code.terminalCode)
-    }
-    
+        
     // MARK: - Convenience
     
     public static func ask(question: String, default defaultValue: String?) -> String? {
