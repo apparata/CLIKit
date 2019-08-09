@@ -33,21 +33,39 @@ public enum TerminalType {
 
 public final class Terminal {
     
-    public static var columnCount: Int {
-        let columnsRaw = getenv("COLUMNS")
-        let columnsString = columnsRaw.flatMap { String(validatingUTF8: $0) }
-        
-        if let columnsString = columnsString,
-            let columnCount = Int(columnsString) {
-            return columnCount
+    public typealias WindowSizeDidChangeHandler = (_ rows: Int, _ columns: Int) -> Void
+    
+    public static var windowSizeDidChange: WindowSizeDidChangeHandler? {
+        didSet {
+            windowSizeSource?.cancel()
+            windowSizeSource = DispatchSource.makeSignalSource(signal: SIGWINCH, queue: .main)
+            windowSizeSource?.setEventHandler {
+                var windowSize = winsize()
+                if ioctl(1, UInt(TIOCGWINSZ), &windowSize) == 0 {
+                    Terminal.windowSizeDidChange?(Int(windowSize.ws_row), Int(windowSize.ws_col))
+                }
+            }
+            windowSizeSource?.resume()
+        }
+    }
+    
+    private static var windowSizeSource: DispatchSourceSignal?
+    
+    public static var windowSize: (rows: Int, columns: Int) {
+        let columns = getenv("COLUMNS").flatMap { String(validatingUTF8: $0) }
+        let rows = getenv("LINES").flatMap { String(validatingUTF8: $0) }
+
+        if let columns = columns, let columnCount = Int(columns),
+            let rows = rows, let rowCount = Int(rows) {
+            return (rows: rowCount, columns: columnCount)
         }
             
         var windowSize = winsize()
         if ioctl(1, UInt(TIOCGWINSZ), &windowSize) == 0 {
-            return Int(windowSize.ws_col)
+            return (rows: Int(windowSize.ws_row), columns: Int(windowSize.ws_col))
         }
             
-        return 80
+        return (rows: 10, columns: 80)
     }
     
     public static func type(fileHandle: FileHandle) -> TerminalType {
