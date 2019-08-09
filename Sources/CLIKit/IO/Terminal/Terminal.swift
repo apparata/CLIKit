@@ -11,10 +11,29 @@ import Darwin.C
 
 public enum TerminalType {
     
+    /// Terminal as described by the `TERM` environment variable.
     case terminal(String)
+    
+    /// A dumb terminal cannot be expected to handle ANSI terminal codes.
     case dumb
+    
+    /// Indicates a file and not a terminal.
     case file
     
+    var isFile: Bool {
+        switch self {
+        case .file: return true
+        default: return false
+        }
+    }
+
+    var isDumb: Bool {
+        switch self {
+        case .dumb: return true
+        default: return false
+        }
+    }
+
     var isTerminal: Bool {
         switch self {
         case .terminal(_): return true
@@ -22,6 +41,8 @@ public enum TerminalType {
         }
     }
     
+    /// Indicates whether the terminal is detected to be an xterm-256color
+    /// terminal that supports the use of extended color ANSI terminal codes.
     var is256ColorXterm: Bool {
         switch self {
         case .terminal(let type) where type == "xterm-256color":
@@ -35,6 +56,9 @@ public final class Terminal {
     
     public typealias WindowSizeDidChangeHandler = (_ rows: Int, _ columns: Int) -> Void
     
+    /// Closure that is invoked whenever the size of the terminal window
+    /// changes. Invocations are done on the main thread. The first argument
+    /// represents the row count and the second argument the column count.
     public static var windowSizeDidChange: WindowSizeDidChangeHandler? {
         didSet {
             windowSizeSource?.cancel()
@@ -51,6 +75,7 @@ public final class Terminal {
     
     private static var windowSizeSource: DispatchSourceSignal?
     
+    /// The current size of the terminal window.
     public static var windowSize: (rows: Int, columns: Int) {
         let columns = getenv("COLUMNS").flatMap { String(validatingUTF8: $0) }
         let rows = getenv("LINES").flatMap { String(validatingUTF8: $0) }
@@ -68,6 +93,7 @@ public final class Terminal {
         return (rows: 10, columns: 80)
     }
     
+    /// The detected terminal type for the specified file handle.
     public static func type(fileHandle: FileHandle) -> TerminalType {
         let terminal = getenv("TERM").flatMap { String(validatingUTF8: $0) }
         if terminal?.lowercased() == "dumb" {
@@ -82,6 +108,7 @@ public final class Terminal {
 
 public extension Terminal {
     
+    /// The detected terminal type for the specified output channel.
     static func type(output: Output) -> TerminalType {
         if let wrapper = output as? WrapsFileHandle {
             return type(fileHandle: wrapper.fileHandle)
