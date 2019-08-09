@@ -29,6 +29,7 @@ jazzy \
   --github_url https://github.com/apparata/CLIKit \
   --output "docs/CLIKit" \
   --readme "README.md" \
+  --theme fullwidth \
   --source-directory .
 
 rm CLIKitDocs.json

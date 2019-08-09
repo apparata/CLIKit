@@ -1,6 +1,132 @@
 {
   "warnings": [
     {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Array+CommandArgumentValue.swift",
+      "line": 13,
+      "symbol": "Array.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Dictionary+CommandArgumentValue.swift",
+      "line": 13,
+      "symbol": "Dictionary.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Double+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "Double.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Float+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "Float.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Float+CommandArgumentValue.swift",
+      "line": 21,
+      "symbol": "Float80.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Int+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "Int.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Int+CommandArgumentValue.swift",
+      "line": 19,
+      "symbol": "Int8.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Int+CommandArgumentValue.swift",
+      "line": 29,
+      "symbol": "Int16.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Int+CommandArgumentValue.swift",
+      "line": 39,
+      "symbol": "Int32.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Int+CommandArgumentValue.swift",
+      "line": 49,
+      "symbol": "Int64.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/Set+CommandArgumentValue.swift",
+      "line": 13,
+      "symbol": "Set.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/String+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "String.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/UInt+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "UInt.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/UInt+CommandArgumentValue.swift",
+      "line": 19,
+      "symbol": "UInt8.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/UInt+CommandArgumentValue.swift",
+      "line": 29,
+      "symbol": "UInt16.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/UInt+CommandArgumentValue.swift",
+      "line": 39,
+      "symbol": "UInt32.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/UInt+CommandArgumentValue.swift",
+      "line": 49,
+      "symbol": "UInt64.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/Argument Value Types/URL+CommandArgumentValue.swift",
+      "line": 9,
+      "symbol": "URL.init(argumentValue:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentSpecification.swift",
       "line": 7,
       "symbol": "CommandArgumentSpecification",
@@ -44,43 +170,8 @@
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 14,
-      "symbol": "String.init(argumentValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 21,
-      "symbol": "Int.init(argumentValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 42,
+      "line": 16,
       "symbol": "Optional.init(argumentValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 52,
-      "symbol": "Int64.init(argumentValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 62,
-      "symbol": "Float.init(argumentValue:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Command Line/Arguments/CommandArgumentValue.swift",
-      "line": 72,
-      "symbol": "Double.init(argumentValue:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
