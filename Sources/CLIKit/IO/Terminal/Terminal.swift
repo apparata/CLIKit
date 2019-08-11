@@ -90,17 +90,19 @@ public final class Terminal {
             return (rows: Int(windowSize.ws_row), columns: Int(windowSize.ws_col))
         }
             
-        return (rows: 10, columns: 80)
+        return (rows: 0, columns: 0)
     }
     
     /// The detected terminal type for the specified file handle.
     public static func type(fileHandle: FileHandle) -> TerminalType {
         let terminal = getenv("TERM").flatMap { String(validatingUTF8: $0) }
-        if terminal?.lowercased() == "dumb" {
-            return .dumb
-        }
-        if isatty(fileHandle.fileDescriptor) == 1 {
-            return .terminal(terminal ?? "generic")
+        if let terminalString = terminal?.lowercased().trimmingWhitespace() {
+            if ["", "dumb", "cons25", "emacs"].contains(terminalString) {
+                return .dumb
+            }
+            if isatty(fileHandle.fileDescriptor) == 1 {
+                return .terminal(terminalString)
+            }
         }
         return .file
     }

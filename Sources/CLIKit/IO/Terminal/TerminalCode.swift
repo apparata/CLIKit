@@ -13,6 +13,9 @@ public enum TerminalCode {
     case right(steps: Int)
     case left(steps: Int)
     
+    /// Moves cursor to the beginning of the line.
+    case toLineStart
+    
     /// Moves cursor to beginning of line `steps` lines down.
     case nextLine(steps: Int)
     
@@ -30,6 +33,9 @@ public enum TerminalCode {
     
     // Restores the cursor to the last saved position.
     case restorePosition
+    
+    // Reports the cursor position.
+    case reportPosition
     
     case clearScreen
     case clearScreenFromCursor
@@ -107,16 +113,18 @@ public enum TerminalCode {
         
         // -- Cursor --
             
-        case .up(let steps): return "\u{001B}[\(steps)A"
-        case .down(let steps): return "\u{001B}[\(steps)B"
-        case .right(let steps): return "\u{001B}[\(steps)C"
-        case .left(let steps): return "\u{001B}[\(steps)D"
+        case .up(let steps): return steps > 0 ? "\u{001B}[\(steps)A" : ""
+        case .down(let steps): return steps > 0 ? "\u{001B}[\(steps)B" : ""
+        case .right(let steps): return steps > 0 ? "\u{001B}[\(steps)C" : ""
+        case .left(let steps): return steps > 0 ? "\u{001B}[\(steps)D" : ""
+        case .toLineStart: return "\u{001B}[1000D"
         case .nextLine(let steps): return "\u{001B}[\(steps)E"
         case .previousLine(let steps): return "\u{001B}[\(steps)F"
         case .setColumn(let column): return "\u{001B}[\(column)G"
         case .setPosition(let row, let column): return "\u{001B}[\(row);\(column)H"
         case .savePosition: return "\u{001B}[s"
         case .restorePosition: return "\u{001B}[u"
+        case .reportPosition: return "\u{001B}[6n"
 
         // -- Clear Screen --
         

@@ -77,5 +77,9 @@ extension TerminalString: ExpressibleByStringInterpolation {
         public mutating func appendInterpolation(_ code: TerminalCode) {
             fragments.append(.terminalCode(code.terminalCode))
         }
+        
+        public mutating func appendInterpolation(_ value: CustomStringConvertible) {
+            fragments.append(.string(value.description))
+        }
     }
 }

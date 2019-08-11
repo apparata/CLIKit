@@ -22,6 +22,7 @@ public protocol Input {
 
 public protocol Output {
     func write(_ data: Data)
+    func write(_ character: Character)
     func write(_ string: String)
     func writeLine(_ string: String)
     func flush()

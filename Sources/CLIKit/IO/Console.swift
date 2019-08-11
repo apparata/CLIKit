@@ -25,6 +25,14 @@ public class Console {
     }
     
     // MARK: - Write
+
+    public static func write(_ character: Character) {
+        standard.out.write(character)
+    }
+
+    public static func writeError(_ character: Character) {
+        standard.error.write(character)
+    }
     
     public static func write(_ string: String) {
         standard.out.write(string)
@@ -61,11 +69,19 @@ public class Console {
     // MARK: - Write Terminal Code
     
     public static func write(_ code: TerminalCode) {
-        write(code.terminalCode)
+        if terminalType.isTerminal, !ExecutionMode.isDebuggerAttached {
+            write(code.terminalCode)
+        } else {
+            // Ignoring terminal code for non-terminals.
+        }
     }
 
     public static func writeError(_ code: TerminalCode) {
-        write(code.terminalCode)
+        if errorTerminalType.isTerminal, !ExecutionMode.isDebuggerAttached {
+            write(code.terminalCode)
+        } else {
+            // Ignoring terminal code for non-terminals.
+        }
     }
         
     // MARK: - Convenience
@@ -107,6 +123,33 @@ public class Console {
         }
     }
     
+    public static func bell() {
+        write("\u{0007}")
+    }
+    
+    public static func cursorPosition() -> (row: Int, column: Int) {
+        write(.reportPosition)
+        
+        guard let firstCharacter = Console.standard.in.read(length: 1)?.first else {
+            return (row: 0, column: 0)
+        }
+        
+        var character = firstCharacter
+        var string: String = ""
+        while character != "R" {
+            guard let nextCharacter = Console.standard.in.read(length: 1)?.first else {
+                return (row: 0, column: 0)
+            }
+            character = nextCharacter
+            if "0123456789;".contains(character) {
+                string.append(character)
+            }
+        }
+        let parts = string.split(separator: ";")
+        return (row: parts.first.flatMap { Int($0) } ?? 0,
+                column: parts.last.flatMap { Int($0) } ?? 0)
+    }
+    
     // MARK: - Clear
     
     public static func clear() {
@@ -114,13 +157,26 @@ public class Console {
         write("\r")
         flush()
     }
-    
+        
     public static func clearError() {
         writeError(.clearScreen)
         write("\r")
         flush()
     }
 
+    public static func clearFromCursor() {
+        write(.clearScreenFromCursor)
+        write("\r")
+        flush()
+    }
+        
+    public static func clearFromCursorError() {
+        writeError(.clearScreenFromCursor)
+        write("\r")
+        flush()
+    }
+
+    
     public static func clearLine() {
         write(.clearLine)
         write("\r")
