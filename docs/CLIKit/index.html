@@ -22,7 +22,7 @@
         <a class="header-link" href="index.html">
            Docs
         </a>
-         (16% documented)
+         (17% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -53,7 +53,13 @@
             <a class="nav-group-name-link" href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes.html#/s:6CLIKit9BasicREPLC">BasicREPL</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CommandFlag.html">CommandFlag</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/CommandLineHistory.html">CommandLineHistory</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/CommandLineParser.html">CommandLineParser</a>
@@ -95,6 +101,12 @@
                 <a class="nav-group-task-link" href="Classes/LineReader.html">LineReader</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/ReadEvaluatePrintLoop.html">ReadEvaluatePrintLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/SimpleWordCompletion.html">SimpleWordCompletion</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/StandardBaseOutput.html">StandardBaseOutput</a>
               </li>
               <li class="nav-group-task">
@@ -120,6 +132,15 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Classes/Terminal.html">Terminal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TerminalInputMode.html">TerminalInputMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TerminalInputMode/Mode.html">– Mode</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/TerminalREPL.html">TerminalREPL</a>
               </li>
             </ul>
           </li>
@@ -147,6 +168,12 @@
                 <a class="nav-group-task-link" href="Enums/CommandLineError.html">CommandLineError</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ReadEvaluatePrintLoopError.html">ReadEvaluatePrintLoopError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ReadEvaluatePrintLoopResult.html">ReadEvaluatePrintLoopResult</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/StandardEnvironmentVariable.html">StandardEnvironmentVariable</a>
               </li>
               <li class="nav-group-task">
@@ -156,16 +183,10 @@
                 <a class="nav-group-task-link" href="Enums/TerminalCode.html">TerminalCode</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/TerminalCode/ClearScreen.html">– ClearScreen</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/TerminalCode/ClearLine.html">– ClearLine</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="Enums/TerminalCode/TextStyle.html">– TextStyle</a>
-              </li>
-              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/TerminalCode/ExtendedColor.html">– ExtendedColor</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/TerminalInputModeError.html">TerminalInputModeError</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Enums/TerminalType.html">TerminalType</a>
@@ -177,6 +198,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Array.html">Array</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/Character.html">Character</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Extensions/Dictionary.html">Dictionary</a>
@@ -282,6 +306,9 @@
                 <a class="nav-group-task-link" href="Protocols/Output.html">Output</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TextCompletion.html">TextCompletion</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Protocols/WrapsFileHandle.html">WrapsFileHandle</a>
               </li>
             </ul>
@@ -334,6 +361,7 @@ command line tools in Swift.</p>
 <li><a href="#subprocesses">Subprocesses</a></li>
 <li><a href="#terminal-output">Terminal Output</a></li>
 <li><a href="#execution">Execution</a></li>
+<li><a href="#read-evaluate-print-loop">Read Evaluate Print Loop</a></li>
 <li><a href="#path-management">Path Management</a></li>
 </ul></li>
 </ul>
@@ -467,7 +495,7 @@ by the system, e.g. if the user presses Ctrl-C.</p>
 
 <p>There is an optional closure parameter to handle any necessary cleanup when the
 program is terminated. The closure is called if the process receives <code>SIGINT</code> (typically if 
-the user presses Ctrl-C) or <code>SIGTERM</code>.</p>
+the user presses Ctrl-C), <code>SIGHUP</code> (terminal disconnected) or <code>SIGTERM</code> (terminate).</p>
 
 <p>Example:</p>
 <pre class="highlight swift"><code><span class="kt">Execution</span><span class="o">.</span><span class="n">runUntilTerminated</span> <span class="p">{</span> <span class="n">signal</span> <span class="k">in</span> 
@@ -488,7 +516,44 @@ the user presses Ctrl-C) or <code>SIGTERM</code>.</p>
         <span class="c1">// This will not allow Ctrl-C to terminate the program.</span>
         <span class="k">return</span> <span class="kc">false</span>
     <span class="p">}</span>
+
+    <span class="k">case</span> <span class="o">.</span><span class="nv">terminalDisconnected</span><span class="p">:</span>
+        <span class="c1">// Do any necessary cleanup here.</span>
+        <span class="o">...</span>
+
+        <span class="c1">// Return false to suppress the SIGHUP signal.</span>
+        <span class="c1">// This will allow the process to run without the terminal.</span>
+        <span class="k">return</span> <span class="kc">false</span>
+    <span class="p">}</span>
 <span class="p">}</span>
+</code></pre>
+<h2 id='read-evaluate-print-loop' class='heading'>Read Evaluate Print Loop</h2>
+
+<p>The <code><a href="Classes/ReadEvaluatePrintLoop.html">ReadEvaluatePrintLoop</a></code> class has a built in command line editor with support for
+various common keyboard shortcuts, customizable tab completion, a command line
+history, and multi-line support. If the terminal is <q>dumb</q> or a debugger is attached
+(such as if you want to run in the Xcode console) it falls back to just reading buffered lines
+from stdin.</p>
+
+<p>Example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">readEvaluatePrintLoop</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">ReadEvaluatePrintLoop</span><span class="p">()</span>
+
+<span class="n">readEvaluatePrintLoop</span><span class="o">.</span><span class="n">textCompletion</span> <span class="o">=</span> <span class="kt">SimpleWordCompletion</span><span class="p">(</span><span class="nv">completions</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s">"banana"</span><span class="p">,</span>
+    <span class="s">"discombobulated"</span><span class="p">,</span>
+    <span class="s">"water"</span><span class="p">,</span>
+    <span class="s">"whatever"</span>
+<span class="p">])</span>
+
+<span class="k">try</span> <span class="n">readEvaluatePrintLoop</span><span class="o">.</span><span class="n">run</span> <span class="p">{</span> <span class="n">input</span> <span class="k">in</span>
+    <span class="k">guard</span> <span class="o">!</span><span class="p">[</span><span class="s">"quit"</span><span class="p">,</span> <span class="s">"exit"</span><span class="p">]</span><span class="o">.</span><span class="nf">contains</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">.</span><span class="k">break</span>
+    <span class="p">}</span>
+
+    <span class="kt">Console</span><span class="o">.</span><span class="nf">write</span><span class="p">(</span><span class="nv">terminalString</span><span class="p">:</span> <span class="s">"You entered: </span><span class="se">\(</span><span class="n">input</span><span class="se">)\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="o">.</span><span class="k">continue</span>
+<span class="p">}</span>
+
 </code></pre>
 <h2 id='path-management' class='heading'>Path Management</h2>
 
@@ -557,7 +622,7 @@ the user presses Ctrl-C) or <code>SIGTERM</code>.</p>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-09)</p>
+      <p>&copy; 2019 <a class="link" href="http://apparata.se" target="_blank" rel="external">Apparata</a>. All rights reserved. (Last updated: 2019-08-11)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

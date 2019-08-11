@@ -18,6 +18,7 @@ CLIKit is released under the MIT license. See `LICENSE` file for more detailed i
   - [Subprocesses](#subprocesses)
   - [Terminal Output](#terminal-output)
   - [Execution](#execution)
+  - [Read Evaluate Print Loop](#read-evaluate-print-loop)
   - [Path Management](#path-management)
 
 # Getting Started
@@ -212,6 +213,37 @@ Execution.runUntilTerminated { signal in
         return false
     }
 }
+```
+
+## Read Evaluate Print Loop
+
+The `ReadEvaluatePrintLoop` class has a built in command line editor with support for
+various common keyboard shortcuts, customizable tab completion, a command line
+history, and multi-line support. If the terminal is "dumb" or a debugger is attached
+(such as if you want to run in the Xcode console) it falls back to just reading buffered lines
+from stdin.
+
+Example:
+
+```swift
+let readEvaluatePrintLoop = try ReadEvaluatePrintLoop()
+
+readEvaluatePrintLoop.textCompletion = SimpleWordCompletion(completions: [
+    "banana",
+    "discombobulated",
+    "water",
+    "whatever"
+])
+
+try readEvaluatePrintLoop.run { input in
+    guard !["quit", "exit"].contains(input) else {
+        return .break
+    }
+    
+    Console.write(terminalString: "You entered: \(input)\n")
+    return .continue
+}
+
 ```
 
 ## Path Management

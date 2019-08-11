@@ -876,20 +876,6 @@
       "warning": "undocumented"
     },
     {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/Execution.swift",
-      "line": 10,
-      "symbol": "Execution.SignalType.interrupt",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/Execution.swift",
-      "line": 11,
-      "symbol": "Execution.SignalType.terminate",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Execution/ExecutionMode.swift",
       "line": 7,
       "symbol": "ExecutionMode",
@@ -1263,56 +1249,56 @@
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
       "line": 37,
-      "symbol": "Console.writeLine(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 41,
-      "symbol": "Console.writeLineError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 45,
-      "symbol": "Console.write(terminalString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 49,
-      "symbol": "Console.writeError(terminalString:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 53,
-      "symbol": "Console.print(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 57,
-      "symbol": "Console.printError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 63,
       "symbol": "Console.write(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 67,
+      "line": 41,
       "symbol": "Console.writeError(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 45,
+      "symbol": "Console.writeLine(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 49,
+      "symbol": "Console.writeLineError(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 53,
+      "symbol": "Console.write(terminalString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 57,
+      "symbol": "Console.writeError(terminalString:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 61,
+      "symbol": "Console.print(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 65,
+      "symbol": "Console.printError(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
@@ -1325,91 +1311,91 @@
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 75,
-      "symbol": "Console.writeError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
       "line": 79,
-      "symbol": "Console.write(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 83,
       "symbol": "Console.writeError(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 87,
-      "symbol": "Console.write(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 91,
-      "symbol": "Console.writeError(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 97,
+      "line": 89,
       "symbol": "Console.ask(question:default:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 116,
+      "line": 108,
       "symbol": "Console.confirmYesOrNo(question:default:)",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 136,
+      "line": 126,
+      "symbol": "Console.bell()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 130,
+      "symbol": "Console.cursorPosition()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 155,
       "symbol": "Console.clear()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 142,
+      "line": 161,
       "symbol": "Console.clearError()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 148,
+      "line": 167,
+      "symbol": "Console.clearFromCursor()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 173,
+      "symbol": "Console.clearFromCursorError()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
+      "line": 180,
       "symbol": "Console.clearLine()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 154,
+      "line": 186,
       "symbol": "Console.clearLineError()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 162,
+      "line": 194,
       "symbol": "Console.flush()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Console.swift",
-      "line": 166,
+      "line": 198,
       "symbol": "Console.flushError()",
       "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
@@ -1522,21 +1508,217 @@
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/IO.swift",
       "line": 26,
-      "symbol": "Output.writeLine(_:)",
+      "symbol": "Output.write(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/IO.swift",
       "line": 27,
-      "symbol": "Output.flush()",
+      "symbol": "Output.writeLine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/IO.swift",
       "line": 28,
+      "symbol": "Output.flush()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/IO.swift",
+      "line": 29,
       "symbol": "Output.close()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Basic REPL/BasicREPL.swift",
+      "line": 7,
+      "symbol": "BasicREPL",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 7,
+      "symbol": "CommandLineHistory",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 9,
+      "symbol": "CommandLineHistory.lineCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 16,
+      "symbol": "CommandLineHistory.init(maxLineCount:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 21,
+      "symbol": "CommandLineHistory.addEntry(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 33,
+      "symbol": "CommandLineHistory.updateEntry(_:at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 37,
+      "symbol": "CommandLineHistory.removeFirstEntry()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/CommandLineHistory.swift",
+      "line": 41,
+      "symbol": "CommandLineHistory.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 7,
+      "symbol": "ReadEvaluatePrintLoopError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 8,
+      "symbol": "ReadEvaluatePrintLoopError.unsupportedTerminal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 9,
+      "symbol": "ReadEvaluatePrintLoopError.endOfInput",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 10,
+      "symbol": "ReadEvaluatePrintLoopError.interrupted",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 13,
+      "symbol": "ReadEvaluatePrintLoopResult",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 14,
+      "symbol": "ReadEvaluatePrintLoopResult.continue",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 15,
+      "symbol": "ReadEvaluatePrintLoopResult.break",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 32,
+      "symbol": "ReadEvaluatePrintLoop",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 34,
+      "symbol": "ReadEvaluatePrintLoop.Evaluator",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 36,
+      "symbol": "ReadEvaluatePrintLoop.prompt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 42,
+      "symbol": "ReadEvaluatePrintLoop.textCompletion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 50,
+      "symbol": "ReadEvaluatePrintLoop.init(prompt:maxHistoryLineCount:textCompletion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/ReadEvaluatePrintLoop.swift",
+      "line": 69,
+      "symbol": "ReadEvaluatePrintLoop.run(evaluateAndPrint:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 7,
+      "symbol": "TerminalREPL",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 9,
+      "symbol": "TerminalREPL.Evaluator",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 21,
+      "symbol": "TerminalREPL.prompt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 23,
+      "symbol": "TerminalREPL.textCompletion",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 29,
+      "symbol": "TerminalREPL.init(prompt:maxHistoryLineCount:textCompletion:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/REPL/Terminal REPL/TerminalREPL.swift",
+      "line": 37,
+      "symbol": "TerminalREPL.run(evaluateAndPrint:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -1626,70 +1808,77 @@
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 53,
+      "line": 85,
       "symbol": "StandardInput.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 65,
+      "line": 97,
       "symbol": "StandardBaseOutput",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 67,
+      "line": 99,
       "symbol": "StandardBaseOutput.fileHandle",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 73,
+      "line": 105,
       "symbol": "StandardBaseOutput.write(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 77,
+      "line": 109,
       "symbol": "StandardBaseOutput.write(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 84,
+      "line": 113,
+      "symbol": "StandardBaseOutput.write(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
+      "line": 120,
       "symbol": "StandardBaseOutput.writeLine(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 89,
+      "line": 125,
       "symbol": "StandardBaseOutput.flush()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 93,
+      "line": 129,
       "symbol": "StandardBaseOutput.close()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 98,
+      "line": 134,
       "symbol": "StandardOutput",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/StandardIO.swift",
-      "line": 105,
+      "line": 141,
       "symbol": "StandardError",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
@@ -1710,51 +1899,16 @@
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 14,
-      "symbol": "TerminalType.terminal(_:)",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 15,
-      "symbol": "TerminalType.dumb",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 16,
-      "symbol": "TerminalType.file",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 34,
+      "line": 55,
       "symbol": "Terminal",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 36,
-      "symbol": "Terminal.columnCount",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 53,
-      "symbol": "Terminal.type(fileHandle:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/Terminal.swift",
-      "line": 67,
-      "symbol": "Terminal.type(output:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "line": 57,
+      "symbol": "Terminal.WindowSizeDidChangeHandler",
+      "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
@@ -1766,408 +1920,520 @@
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 9,
-      "symbol": "TerminalCode.ClearScreen",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 11,
-      "symbol": "TerminalCode.ClearScreen.clearScreen",
+      "symbol": "TerminalCode.up(steps:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 12,
-      "symbol": "TerminalCode.ClearScreen.clearScreenFromCursor",
+      "symbol": "TerminalCode.down(steps:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 13,
-      "symbol": "TerminalCode.ClearScreen.clearScreenToCursor",
+      "symbol": "TerminalCode.right(steps:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 15,
-      "symbol": "TerminalCode.ClearScreen.terminalCode",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 20,
-      "symbol": "TerminalCode.ClearLine",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 23,
-      "symbol": "TerminalCode.ClearLine.clearLine",
+      "line": 14,
+      "symbol": "TerminalCode.left(steps:)",
       "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 24,
-      "symbol": "TerminalCode.ClearLine.clearLineFromCursor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 25,
-      "symbol": "TerminalCode.ClearLine.clearLineToCursor",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 27,
-      "symbol": "TerminalCode.ClearLine.terminalCode",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 32,
-      "symbol": "TerminalCode.TextStyle",
-      "symbol_kind": "source.lang.swift.decl.enum",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 34,
-      "symbol": "TerminalCode.TextStyle.reset",
+      "symbol": "TerminalCode.savePosition",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 36,
-      "symbol": "TerminalCode.TextStyle.bold",
+      "line": 35,
+      "symbol": "TerminalCode.restorePosition",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 37,
-      "symbol": "TerminalCode.TextStyle.boldOff",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 39,
-      "symbol": "TerminalCode.TextStyle.italic",
+      "line": 38,
+      "symbol": "TerminalCode.reportPosition",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 40,
-      "symbol": "TerminalCode.TextStyle.italicOff",
+      "symbol": "TerminalCode.clearScreen",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 41,
+      "symbol": "TerminalCode.clearScreenFromCursor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 42,
-      "symbol": "TerminalCode.TextStyle.underline",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 43,
-      "symbol": "TerminalCode.TextStyle.underlineOff",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 45,
-      "symbol": "TerminalCode.TextStyle.inverse",
+      "symbol": "TerminalCode.clearScreenToCursor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 46,
-      "symbol": "TerminalCode.TextStyle.inverseOff",
+      "symbol": "TerminalCode.clearLine",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 47,
+      "symbol": "TerminalCode.clearLineFromCursor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 48,
-      "symbol": "TerminalCode.TextStyle.strikethrough",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 49,
-      "symbol": "TerminalCode.TextStyle.strikethroughOff",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 51,
-      "symbol": "TerminalCode.TextStyle.black",
+      "symbol": "TerminalCode.clearLineToCursor",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 52,
-      "symbol": "TerminalCode.TextStyle.red",
+      "symbol": "TerminalCode.reset",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 53,
-      "symbol": "TerminalCode.TextStyle.green",
+      "symbol": "TerminalCode.bold",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 54,
-      "symbol": "TerminalCode.TextStyle.yellow",
+      "symbol": "TerminalCode.boldOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 55,
-      "symbol": "TerminalCode.TextStyle.blue",
+      "symbol": "TerminalCode.italic",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 56,
-      "symbol": "TerminalCode.TextStyle.magenta",
+      "symbol": "TerminalCode.italicOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 57,
-      "symbol": "TerminalCode.TextStyle.cyan",
+      "symbol": "TerminalCode.underline",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 58,
-      "symbol": "TerminalCode.TextStyle.white",
+      "symbol": "TerminalCode.underlineOff",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 59,
+      "symbol": "TerminalCode.inverse",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 60,
-      "symbol": "TerminalCode.TextStyle.brightBlack",
+      "symbol": "TerminalCode.inverseOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 61,
-      "symbol": "TerminalCode.TextStyle.brightRed",
+      "symbol": "TerminalCode.strikethrough",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 62,
-      "symbol": "TerminalCode.TextStyle.brightGreen",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 63,
-      "symbol": "TerminalCode.TextStyle.brightYellow",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 64,
-      "symbol": "TerminalCode.TextStyle.brightBlue",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 65,
-      "symbol": "TerminalCode.TextStyle.brightMagenta",
+      "symbol": "TerminalCode.strikethroughOff",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 66,
-      "symbol": "TerminalCode.TextStyle.brightCyan",
+      "symbol": "TerminalCode.black",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 67,
-      "symbol": "TerminalCode.TextStyle.brightWhite",
+      "symbol": "TerminalCode.red",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 68,
+      "symbol": "TerminalCode.green",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 69,
-      "symbol": "TerminalCode.TextStyle.blackBackground",
+      "symbol": "TerminalCode.yellow",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 70,
-      "symbol": "TerminalCode.TextStyle.redBackground",
+      "symbol": "TerminalCode.blue",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 71,
-      "symbol": "TerminalCode.TextStyle.greenBackground",
+      "symbol": "TerminalCode.magenta",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 72,
-      "symbol": "TerminalCode.TextStyle.yellowBackground",
+      "symbol": "TerminalCode.cyan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 73,
-      "symbol": "TerminalCode.TextStyle.blueBackground",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 74,
-      "symbol": "TerminalCode.TextStyle.magentaBackground",
+      "symbol": "TerminalCode.white",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 75,
-      "symbol": "TerminalCode.TextStyle.cyanBackground",
+      "symbol": "TerminalCode.brightBlack",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 76,
-      "symbol": "TerminalCode.TextStyle.whiteBackground",
+      "symbol": "TerminalCode.brightRed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 77,
+      "symbol": "TerminalCode.brightGreen",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 78,
-      "symbol": "TerminalCode.TextStyle.brightBlackBackground",
+      "symbol": "TerminalCode.brightYellow",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 79,
-      "symbol": "TerminalCode.TextStyle.brightRedBackground",
+      "symbol": "TerminalCode.brightBlue",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 80,
-      "symbol": "TerminalCode.TextStyle.brightGreenBackground",
+      "symbol": "TerminalCode.brightMagenta",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 81,
-      "symbol": "TerminalCode.TextStyle.brightYellowBackground",
+      "symbol": "TerminalCode.brightCyan",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 82,
-      "symbol": "TerminalCode.TextStyle.brightBlueBackground",
+      "symbol": "TerminalCode.brightWhite",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 83,
-      "symbol": "TerminalCode.TextStyle.brightMagentaBackground",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 84,
-      "symbol": "TerminalCode.TextStyle.brightCyanBackground",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
-      "line": 85,
-      "symbol": "TerminalCode.TextStyle.brightWhiteBackground",
+      "line": 86,
+      "symbol": "TerminalCode.blackBackground",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 87,
-      "symbol": "TerminalCode.TextStyle.terminalCode",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "symbol": "TerminalCode.redBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 88,
+      "symbol": "TerminalCode.greenBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 89,
+      "symbol": "TerminalCode.yellowBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 90,
+      "symbol": "TerminalCode.blueBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 91,
+      "symbol": "TerminalCode.magentaBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 92,
+      "symbol": "TerminalCode.cyanBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 93,
+      "symbol": "TerminalCode.whiteBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 95,
-      "symbol": "TerminalCode.ExtendedColor.foreground(_:)",
+      "symbol": "TerminalCode.brightBlackBackground",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 96,
-      "symbol": "TerminalCode.ExtendedColor.background(_:)",
+      "symbol": "TerminalCode.brightRedBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 97,
+      "symbol": "TerminalCode.brightGreenBackground",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
       "line": 98,
+      "symbol": "TerminalCode.brightYellowBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 99,
+      "symbol": "TerminalCode.brightBlueBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 100,
+      "symbol": "TerminalCode.brightMagentaBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 101,
+      "symbol": "TerminalCode.brightCyanBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 102,
+      "symbol": "TerminalCode.brightWhiteBackground",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 106,
+      "symbol": "TerminalCode.foreground(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 107,
+      "symbol": "TerminalCode.background(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 111,
+      "symbol": "TerminalCode.terminalCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalCode.swift",
+      "line": 206,
       "symbol": "TerminalCode.ExtendedColor.terminalCode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 7,
+      "symbol": "TerminalInputModeError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 8,
+      "symbol": "TerminalInputModeError.stdinIsNotATerminal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 9,
+      "symbol": "TerminalInputModeError.failedToRestoreTerminalAttributes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 10,
+      "symbol": "TerminalInputModeError.failedToReadTerminalAttributes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 11,
+      "symbol": "TerminalInputModeError.failedToApplyTerminalAttributes",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 14,
+      "symbol": "TerminalInputMode",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 16,
+      "symbol": "TerminalInputMode.Mode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 17,
+      "symbol": "TerminalInputMode.Mode.normal",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 18,
+      "symbol": "TerminalInputMode.Mode.cbreak",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 19,
+      "symbol": "TerminalInputMode.Mode.raw",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 22,
+      "symbol": "TerminalInputMode.currentMode",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 30,
+      "symbol": "TerminalInputMode.setCBreakMode()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 67,
+      "symbol": "TerminalInputMode.setRawMode()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalInputMode.swift",
+      "line": 124,
+      "symbol": "TerminalInputMode.reset()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
       "warning": "undocumented"
     },
     {
@@ -2250,20 +2516,6 @@
     {
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalString.swift",
       "line": 81,
-      "symbol": "TerminalString.StringInterpolation.appendInterpolation(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalString.swift",
-      "line": 85,
-      "symbol": "TerminalString.StringInterpolation.appendInterpolation(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/IO/Terminal/TerminalString.swift",
-      "line": 89,
       "symbol": "TerminalString.StringInterpolation.appendInterpolation(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -2783,6 +3035,146 @@
       "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Subprocess/SubprocessResult.swift",
       "line": 59,
       "symbol": "SubprocessResult.capturedErrorString()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 9,
+      "symbol": "Character.isEmoji",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 26,
+      "symbol": "Character.isPrintable",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 36,
+      "symbol": "Character.isBackspace",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 40,
+      "symbol": "Character.isCtrlA",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 44,
+      "symbol": "Character.isCtrlC",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 48,
+      "symbol": "Character.isCtrlD",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 52,
+      "symbol": "Character.isCtrlE",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 56,
+      "symbol": "Character.isCtrlK",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 60,
+      "symbol": "Character.isCtrlL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 64,
+      "symbol": "Character.isCtrlT",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 68,
+      "symbol": "Character.isCtrlU",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/Character+Inspection.swift",
+      "line": 72,
+      "symbol": "Character.isEscape",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/SimpleWordCompletion.swift",
+      "line": 7,
+      "symbol": "SimpleWordCompletion",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/SimpleWordCompletion.swift",
+      "line": 9,
+      "symbol": "SimpleWordCompletion.completions",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/SimpleWordCompletion.swift",
+      "line": 11,
+      "symbol": "SimpleWordCompletion.init(completions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/SimpleWordCompletion.swift",
+      "line": 15,
+      "symbol": "SimpleWordCompletion.complete(input:index:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/String+Words.swift",
+      "line": 9,
+      "symbol": "String.wordRange(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/String+Words.swift",
+      "line": 18,
+      "symbol": "String.word(at:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/TextCompletion.swift",
+      "line": 7,
+      "symbol": "TextCompletion",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/martin/Projekt/git/frameworks/CLIKit/Sources/CLIKit/Utilities/TextCompletion.swift",
+      "line": 8,
+      "symbol": "TextCompletion.complete(input:index:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     }
