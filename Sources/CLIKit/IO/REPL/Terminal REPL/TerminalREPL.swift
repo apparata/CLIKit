@@ -175,12 +175,22 @@ public final class TerminalREPL: REPLImplementation {
                     let inputBefore = state.input
                     let indexBefore = state.index
                     let (input, index) = textCompletion.complete(input: inputBefore, index: indexBefore)
-                    Console.printError("\(indexBefore) \(index)")
                     if inputBefore == input, indexBefore == index {
                         Console.bell()
                     } else {
+                        let expandedBefore = state.expandedToRows
                         state.input = input
                         state.index = index
+                        let (endRow, endColumn) = state.end
+                        Console.write(.setPosition(row: endRow, column: endColumn))
+                        let expandedAfter = state.expandedToRows
+                        let delta = expandedAfter - expandedBefore
+                        if delta > 0 {
+                            if isLogEnabled {
+                                Console.printError("Delta \(delta)")
+                            }
+                            Console.write(String.init(repeating: "\n", count: delta))
+                        }
                     }
                 } else {
                     Console.bell()
