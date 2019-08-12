@@ -4,4 +4,5 @@
 /*.xcodeproj
 xcuserdata/
 /build
+.swiftpm
 CLIKitDocs.json
