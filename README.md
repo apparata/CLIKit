@@ -112,6 +112,26 @@ If the binary is called `math`, the `fibonacci` subcommand can be run like this 
 $ math fibonacci -i 4
 ```
 
+There are a few different types of arguments:
+
+```swift
+@CommandFlag(short: "v", description: "Prints verbose output")
+var verbose: Bool
+
+@CommandOption(short: "i", default: 5, regex: #"^\d+$"#,
+               description: "Number of iterations to perform.")
+var iterations: Int
+
+@CommandRequiredInput(description: "First number")
+var numberA: Int
+
+@CommandOptionalInput(default: 0, description: "Number to factorize")
+var number: Int
+
+@CommandVariadicInput(description: "More numbers")
+var numbers: [Int]
+```
+
 ## Subprocesses
 
 Example of launching a subprocess and capturing its output:
