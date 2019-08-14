@@ -40,16 +40,18 @@ public final class Execution {
     ///                            handler returns `false`, the program will
     ///                            suppress the signal and not exit.
     public static func runUntilTerminated(signalHandler: SignalHandler? = nil) {
-        instance.signalSources = instance.installSignalHandler(signalHandler)
+        if let signalHandler = signalHandler {
+            instance.signalSources = instance.installSignalHandler(signalHandler)
+        }
         RunLoop.main.run()
     }
     
     /// Installs `SIGINT`, `SIGHUP`, and `SIGTERM` signal handler.
-    private func installSignalHandler(_ handler: SignalHandler?) -> [DispatchSourceSignal] {
+    private func installSignalHandler(_ handler: @escaping SignalHandler) -> [DispatchSourceSignal] {
         
         let sigintSource = DispatchSource.makeSignalSource(signal: SIGINT, queue: signalQueue)
         sigintSource.setEventHandler {
-            let shouldExit = handler?(.interrupt) ?? true
+            let shouldExit = handler(.interrupt)
             print()
             if shouldExit {
                 exit(0)
@@ -58,7 +60,7 @@ public final class Execution {
 
         let sighupSource = DispatchSource.makeSignalSource(signal: SIGHUP, queue: signalQueue)
         sigintSource.setEventHandler {
-            let shouldExit = handler?(.terminalDisconnected) ?? true
+            let shouldExit = handler(.terminalDisconnected)
             print()
             if shouldExit {
                 exit(0)
@@ -67,7 +69,7 @@ public final class Execution {
         
         let sigtermSource = DispatchSource.makeSignalSource(signal: SIGTERM, queue: signalQueue)
         sigtermSource.setEventHandler {
-            let shouldExit = handler?(.terminate) ?? true
+            let shouldExit = handler(.terminate)
             print()
             if shouldExit {
                 exit(0)
