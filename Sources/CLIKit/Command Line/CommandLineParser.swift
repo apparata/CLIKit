@@ -12,19 +12,40 @@ public final class CommandLineParser {
         
     /// Parse command line directly from the CommandLine enum.
     public func parse(command: Command) throws -> Command {
-        return try parseArguments(CommandLine.arguments, command: command)
+        let (commandName, arguments) = try splitArguments(CommandLine.arguments)
+        return try parseArguments(commandName: commandName,
+                                  arguments: arguments,
+                                  command: command)
     }
     
     /// Parse command line arguments.
     ///
-    /// - parameter arguments: Arguments, including the executable argument.
-    public func parseArguments(_ argumentsIncludingExecutable: [String],
+    /// - parameter arguments: Arguments, including the root command argument.
+    public func parseArguments(_ argumentsIncludingRootCommand: [String],
+                               command: Command,
+                               expectedRootCommand: String) throws -> Command {
+        
+        let (commandName, arguments) = try splitArguments(argumentsIncludingRootCommand)
+        guard commandName == expectedRootCommand else {
+            if let commands = command as? Commands {
+                let namedCommand = InternalNamedCommands(name: expectedRootCommand,
+                                                         commands: commands)
+                throw CommandLineError.usageRequested(command: namedCommand)
+            } else {
+                let namedCommand = InternalNamedCommand(name: expectedRootCommand,
+                                                        command: command)
+                throw CommandLineError.usageRequested(command: namedCommand)
+            }
+        }
+        return try parseArguments(commandName: commandName,
+                                  arguments: arguments,
+                                  command: command)
+    }
+    
+    private func parseArguments(commandName: String,
+                               arguments: [String],
                                command: Command) throws -> Command {
-
-        let commandName = String(argumentsIncludingExecutable.first?.split(separator: "/").last ?? "command")
-        
-        let arguments = Array(argumentsIncludingExecutable.dropFirst())
-        
+                
         try verifyCommandSpecification(command, name: commandName)
         
         assignArgumentsNames(command)
@@ -45,6 +66,25 @@ public final class CommandLineParser {
         default:
             throw CommandLineError.unexpectedError
         }
+    }
+    
+    private func splitArguments(_ arguments: [String]) throws -> (String, [String]) {
+        guard let executable = arguments.first else {
+            throw CommandLineError.noExecutable
+        }
+        
+        let path = Path(executable)
+        
+        let commandName = path.lastComponent
+        
+        guard commandName.count > 0 else {
+            throw CommandLineError.noExecutable
+        }
+        
+        let commandArguments = Array(arguments.dropFirst())
+
+        return (commandName, commandArguments)
+
     }
     
     private func buildInternalCommand(_ command: Command, _ name: String, _ parents: [String] = []) -> InternalCommand {

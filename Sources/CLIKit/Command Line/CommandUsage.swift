@@ -55,21 +55,25 @@ public final class CommandUsage {
     static private func commandNameChain(command: Command) -> String {
         
         if let command = command as? InternalCommand {
-            let parents = command.parentCommands.joined(separator: " ")
-            return "\(parents) \(command.name)"
+            if command.parentCommands.isEmpty {
+                return "\(command.name)"
+            } else {
+                let parents = command.parentCommands.joined(separator: " ")
+                return "\(parents) \(command.name)"
+            }
         } else {
             return "command"
         }
     }
     
     static private func formatSubcommands(command: Command) -> String? {
-        guard let commands = (command as? Commands)?.namedCommands, commands.count > 0 else {
+        guard let commands = (command as? InternalNamedCommands)?.internalCommands, commands.count > 0 else {
             return nil
         }
         var text = "SUBCOMMANDS:\n"
         
-        for (name, subcommand) in commands {
-            var row = "  \(name)"
+        for subcommand in commands {
+            var row = "  \(subcommand.name)"
             row += calculatePadding(string: row)
             row += "\(subcommand.description)\n"
             text += row

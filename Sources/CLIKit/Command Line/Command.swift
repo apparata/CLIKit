@@ -134,7 +134,7 @@ internal class InternalNamedCommand: InternalCommand, Command {
     let originalCommand: Command
     var parentCommands: [String]
     
-    init(name: String, command: Command, parents: [String]) {
+    init(name: String, command: Command, parents: [String] = []) {
         self.name = name
         originalCommand = command
         parentCommands = parents
@@ -201,7 +201,7 @@ internal class InternalNamedCommands: InternalCommands, Commands {
     private(set) var internalCommands: [InternalCommand]
     var parentCommands: [String]
     
-    init(name: String, commands: Commands, parents: [String]) {
+    init(name: String, commands: Commands, parents: [String] = []) {
         self.name = name
         originalCommand = commands
         originalCommands = commands

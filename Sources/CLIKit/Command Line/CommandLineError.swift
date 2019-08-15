@@ -7,6 +7,7 @@ import Foundation
 public enum CommandLineError: LocalizedError {
     
     case unexpectedError
+    case noExecutable
     case invalidFlagOrOption(String)
     case unexpectedArgument(String)
     case missingOptionValue(String)
@@ -24,6 +25,8 @@ public enum CommandLineError: LocalizedError {
         switch self {
         case .unexpectedError:
             return "Error: There was an unexpected error while parsing the command line."
+        case .noExecutable:
+            return "Error: There must be a first argument represenging the command."
         case .invalidFlagOrOption(let flagOrOption):
             return "Error: Invalid flag or option \"\(flagOrOption)\""
         case .unexpectedArgument(let argument):
