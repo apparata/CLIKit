@@ -49,8 +49,33 @@ final class CLIKitTests: XCTestCase {
         XCTAssertTrue(true)
     }
 
+    func testCommandBuildBot() {
+        
+        func runCommand() throws {
+            let parser = CommandLineParser()
+            
+            let arguments: [String] = [
+                "bot",
+                "build",
+                "master"
+            ]
+        
+            let parsedCommand = try parser.parseArguments(arguments, command: BotCommands(), expectedRootCommand: "bot")
+            try parsedCommand.run()
+        }
+        
+        do {
+            try runCommand()
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        XCTAssertTrue(true)
+    }
+    
     static var allTests = [
-        ("testCommandFibonacci", testCommandFibonacci,
-         "testUnrecognizedCommand", testUnrecognizedCommand),
+        ("testCommandFibonacci", testCommandFibonacci),
+        ("testUnrecognizedCommand", testUnrecognizedCommand),
+        ("testCommandBuildBot", testCommandBuildBot),
     ]
 }

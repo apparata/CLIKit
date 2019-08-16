@@ -37,7 +37,7 @@ public class SubprocessResult {
     }
     
     public func capturedErrorData() throws -> Data {
-        guard let result = captureOutputResult else {
+        guard let result = captureErrorResult else {
             throw SubprocessError.failedToCaptureOutput(errorCode: 1337)
         }
         switch result {
