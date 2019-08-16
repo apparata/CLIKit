@@ -41,7 +41,7 @@ public class Subprocess {
     private var captureErrorThread: SubprocessCaptureThread? = nil
     
     public init(executable: Path,
-                arguments: [String],
+                arguments: [String] = [],
                 environment: [String: String] = [:],
                 captureOutput: Bool = true) {
         self.executable = executable
