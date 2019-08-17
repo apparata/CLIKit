@@ -27,7 +27,7 @@ Add CLIKit to your Swift package by adding the following to your `Package.swift`
 the dependencies array:
 
 ```swift
-.package(url: "https://github.com/apparata/CLIKit.git", from: "0.1.0")
+.package(url: "https://github.com/apparata/CLIKit.git", from: "<version>")
 ```
 If you are using Xcode 11 or newer, you can add CLIKit by entering the URL to the
 repository via the `File` menu:
