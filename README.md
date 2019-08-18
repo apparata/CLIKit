@@ -125,8 +125,8 @@ var iterations: Int
 @CommandRequiredInput(description: "First number")
 var numberA: Int
 
-@CommandOptionalInput(default: 0, description: "Number to factorize")
-var number: Int
+@CommandOptionalInput(description: "Number to factorize")
+var number: Int?
 
 @CommandVariadicInput(description: "More numbers")
 var numbers: [Int]
