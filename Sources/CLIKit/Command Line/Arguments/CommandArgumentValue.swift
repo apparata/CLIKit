@@ -9,9 +9,14 @@ public protocol CommandArgumentValue: CustomStringConvertible {
     init(argumentValue: String) throws
 }
 
+public protocol OptionalCommandArgumentValue: ExpressibleByNilLiteral {
+    
+    init(argumentValue: String) throws
+}
+
 /// Allow Optional to implement CommandArgumentValue for wrapped types that
 /// themselves implement CommandArgumentValue
-extension Optional: CommandArgumentValue where Wrapped: CommandArgumentValue {
+extension Optional: OptionalCommandArgumentValue where Wrapped: CommandArgumentValue {
 
     public init(argumentValue: String) throws {
         self = .some(try Wrapped(argumentValue: argumentValue))

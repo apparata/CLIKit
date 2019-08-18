@@ -23,9 +23,8 @@ public protocol CommandInputSpecification: CommandArgumentSpecification {
 /// Example: `aFile.txt` or `file1.txt file2.txt file3.txt`
 ///
 @propertyWrapper
-public class CommandOptionalInput<Value: CommandArgumentValue>: CommandInputSpecification {
+public class CommandOptionalInput<Value: OptionalCommandArgumentValue>: CommandInputSpecification {
     
-    public let defaultValue: Value
     public let validationRegex: String?
     public let description: String
     public let type: CommandInputType = .optional
@@ -42,13 +41,11 @@ public class CommandOptionalInput<Value: CommandArgumentValue>: CommandInputSpec
         }
     }
     
-    public init(default: Value,
-                regex: String? = nil,
+    public init(regex: String? = nil,
                 description: String) {
         validationRegex = regex
-        defaultValue = `default`
         self.description = description
-        value = `default`
+        value = nil
     }
     
     public func bindValue(_ argument: String) throws {
@@ -70,9 +67,9 @@ public class CommandRequiredInput<Value: CommandArgumentValue>: CommandInputSpec
     public private(set) var name: String?
     private var value: Value?
     
-    public var wrappedValue: Value? {
+    public var wrappedValue: Value {
         get {
-            return value
+            return value!
         }
         set {
             value = newValue

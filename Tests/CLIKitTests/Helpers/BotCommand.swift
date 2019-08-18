@@ -10,7 +10,7 @@ class BuildCommand: Command {
     let description = "Request a build"
     
     @CommandRequiredInput(description: "branch")
-    var branch: String!
+    var branch: String
     
     var action: ((BuildCommand) -> Void)?
         

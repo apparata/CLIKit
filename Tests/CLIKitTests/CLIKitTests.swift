@@ -48,7 +48,61 @@ final class CLIKitTests: XCTestCase {
         
         XCTAssertTrue(true)
     }
+    
+    func testRequiredInput() {
+        
+        func runCommand() throws {
+            let parser = CommandLineParser()
+            
+            let arguments: [String] = [
+                "math",
+                "sum"
+            ]
+        
+            let parsedCommand = try parser.parseArguments(arguments, command: MathCommand(), expectedRootCommand: "math")
+            try parsedCommand.run()
+        }
+        
+        XCTAssertThrowsError(try runCommand())
+    }
 
+    func testOptionalInput() {
+        
+        func runCommand() throws {
+            let parser = CommandLineParser()
+            
+            let arguments: [String] = [
+                "math",
+                "sum",
+                "1"
+            ]
+        
+            let parsedCommand = try parser.parseArguments(arguments, command: MathCommand(), expectedRootCommand: "math")
+            try parsedCommand.run()
+        }
+        
+        XCTAssertNoThrow(try runCommand())
+    }
+    
+    func testOptionalInput2() {
+        
+        func runCommand() throws {
+            let parser = CommandLineParser()
+            
+            let arguments: [String] = [
+                "math",
+                "sum",
+                "1",
+                "2"
+            ]
+        
+            let parsedCommand = try parser.parseArguments(arguments, command: MathCommand(), expectedRootCommand: "math")
+            try parsedCommand.run()
+        }
+        
+        XCTAssertNoThrow(try runCommand())
+    }
+    
     func testCommandBuildBot() {
         
         func runCommand() throws {
@@ -76,6 +130,9 @@ final class CLIKitTests: XCTestCase {
     static var allTests = [
         ("testCommandFibonacci", testCommandFibonacci),
         ("testUnrecognizedCommand", testUnrecognizedCommand),
+        ("testRequiredInput", testRequiredInput),
+        ("testOptionalInput", testOptionalInput),
+        ("testOptionalInput2", testOptionalInput2),
         ("testCommandBuildBot", testCommandBuildBot),
     ]
 }

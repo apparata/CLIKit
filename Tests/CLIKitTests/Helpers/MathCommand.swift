@@ -43,11 +43,11 @@ class FactorizeCommand: Command {
     @CommandFlag(short: "v", description: "Prints verbose output")
     var verbose: Bool
     
-    @CommandOptionalInput(default: 0, description: "Number to factorize")
-    var number: Int
+    @CommandOptionalInput(description: "Number to factorize")
+    var number: Int?
     
     func run() {
-        print("Supposed to factorize \(number), but can't be bothered.")
+        print("Supposed to factorize \(number!), but can't be bothered.")
     }
 }
 
@@ -58,11 +58,11 @@ class SumOfTwoCommand: Command {
     @CommandRequiredInput(description: "First number")
     var numberA: Int
 
-    @CommandOptionalInput(default: nil, description: "Second number")
+    @CommandOptionalInput(description: "Second number")
     var numberB: Int?
         
     func run() {
-        print("\((numberA ?? 0) + (numberB ?? 0))")
+        print("\(numberA + (numberB ?? 0))")
     }
 }
 
@@ -71,7 +71,7 @@ class SumCommand: Command {
     let description = "Sum arbitrary amount of numbers"
 
     @CommandRequiredInput(description: "First number")
-    var firstNumber: Int!
+    var firstNumber: Int
     
     @CommandVariadicInput(description: "More numbers")
     var numbers: [Int]
