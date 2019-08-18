@@ -6,8 +6,27 @@ import XCTest
 @testable import CLIKit
 
 final class CLIKitTests: XCTestCase {
-    
+
     func testCommandFibonacci() {
+        
+        func runCommand() throws {
+            let parser = CommandLineParser()
+            
+            let arguments: [String] = [
+                "fibonacci",
+                "-v",
+                "-i",
+                "10"
+            ]
+        
+            let parsedCommand = try parser.parseArguments(arguments, command: FibonacciCommand(), expectedRootCommand: "fibonacci")
+            try parsedCommand.run()
+        }
+        
+        XCTAssertNoThrow(try runCommand())
+    }
+    
+    func testSubcommandFibonacci() {
         
         func runCommand() throws {
             let parser = CommandLineParser()
@@ -129,6 +148,7 @@ final class CLIKitTests: XCTestCase {
     
     static var allTests = [
         ("testCommandFibonacci", testCommandFibonacci),
+        ("testSubcommandFibonacci", testSubcommandFibonacci),
         ("testUnrecognizedCommand", testUnrecognizedCommand),
         ("testRequiredInput", testRequiredInput),
         ("testOptionalInput", testOptionalInput),

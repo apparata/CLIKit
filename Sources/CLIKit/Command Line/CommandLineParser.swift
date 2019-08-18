@@ -10,7 +10,7 @@ public final class CommandLineParser {
         // Do nothing
     }
         
-    /// Parse command line directly from the CommandLine enum.
+    /// Parse command line directly from the CommandLine.arguments array.
     public func parse(command: Command) throws -> Command {
         let (commandName, arguments) = try splitArguments(CommandLine.arguments)
         return try parseArguments(commandName: commandName,
@@ -150,6 +150,8 @@ public final class CommandLineParser {
     private func runStateMachine(for arguments: [String], command: InternalCommand) -> ParserState {
 
         let context = ParserContext(command: command)
+        
+        context.remainingInputs = command.inputs
 
         let stateMachine = ParserStateMachine(context: context)
         stateMachine.delegate = self
