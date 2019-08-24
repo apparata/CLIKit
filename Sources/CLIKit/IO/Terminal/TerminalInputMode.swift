@@ -165,6 +165,16 @@ private extension termios {
         let zeroFlag: tcflag_t = 0
         let cct = (zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
                    zero, zero, zero, zero, zero, zero, zero, zero, zero, zero)
+        #if os(Linux)
+        return termios(c_iflag: zeroFlag,
+                       c_oflag: zeroFlag,
+                       c_cflag: zeroFlag,
+                       c_lflag: zeroFlag,
+                       c_line: cc_t(0),
+                       c_cc: cct,
+                       c_ispeed: speed_t(0),
+                       c_ospeed: speed_t(0))
+        #elseif os(macOS)
         return termios(c_iflag: zeroFlag,
                        c_oflag: zeroFlag,
                        c_cflag: zeroFlag,
@@ -172,6 +182,9 @@ private extension termios {
                        c_cc: cct,
                        c_ispeed: speed_t(0),
                        c_ospeed: speed_t(0))
+        #else
+        #error("Unsupported OS")
+        #endif
     }
     
     subscript(cc: Int32) -> cc_t {
