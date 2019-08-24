@@ -163,9 +163,11 @@ private extension termios {
     static var zero: termios {
         let zero: cc_t = 0
         let zeroFlag: tcflag_t = 0
-        let cct = (zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
-                   zero, zero, zero, zero, zero, zero, zero, zero, zero, zero)
         #if os(Linux)
+        let cct = (zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
+                   zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
+                   zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
+                   zero, zero)
         return termios(c_iflag: zeroFlag,
                        c_oflag: zeroFlag,
                        c_cflag: zeroFlag,
@@ -175,6 +177,8 @@ private extension termios {
                        c_ispeed: speed_t(0),
                        c_ospeed: speed_t(0))
         #elseif os(macOS)
+        let cct = (zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
+                   zero, zero, zero, zero, zero, zero, zero, zero, zero, zero)
         return termios(c_iflag: zeroFlag,
                        c_oflag: zeroFlag,
                        c_cflag: zeroFlag,
