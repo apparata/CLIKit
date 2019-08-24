@@ -190,7 +190,7 @@ internal struct Regex {
     /// - parameter inRange: Restrict matching to this part of the string.
     /// - parameter options: Regular expression matching options.
     /// - parameter action: Closure to call for each match in the string.
-    internal func enumerateMatches(in string: String, inRange: CountableRange<Int>? = nil, options: NSRegularExpression.MatchingOptions = [], action: (_ match: [String]) -> Void) {
+    internal func enumerateMatches(in string: String, inRange: CountableRange<Int>? = nil, options: NSRegularExpression.MatchingOptions = [], action: @escaping (_ match: [String]) -> Void) {
         let inputRange = rangeToNSRange(in: string, range: inRange)
         matcher?.enumerateMatches(in: string, options: options, range: inputRange, using: { (result, _, _) -> Void in
             if let result = result {
