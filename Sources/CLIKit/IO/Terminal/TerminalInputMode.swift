@@ -38,7 +38,7 @@ public final class TerminalInputMode {
         var attributes = try storeTerminalAttributes()
         
         // Echo off, canonical mode off
-        attributes.c_lflag &= ~UInt(ECHO | ICANON)
+        attributes.c_lflag &= ~tcflag_t(ECHO | ICANON)
 
         // 1 byte at a time, no timer.
         attributes[VMIN] = 1
@@ -76,23 +76,23 @@ public final class TerminalInputMode {
         
         // Echo off, canonical mode off, extended input processing off,
         // signal chars off.
-        attributes.c_lflag &= ~UInt(ECHO | ICANON | IEXTEN)
+        attributes.c_lflag &= ~tcflag_t(ECHO | ICANON | IEXTEN)
         
         // No SIGINT on BREAK, CR-to-NL off, input parity check off,
         // don't strip 8th bit on input, output flow control off.
-        attributes.c_iflag &= ~UInt(BRKINT | ICRNL | INPCK | ISTRIP | IXON)
+        attributes.c_iflag &= ~tcflag_t(BRKINT | ICRNL | INPCK | ISTRIP | IXON)
         
         // Helps backspace out with UTF-8 sequences. Or something.
-        attributes.c_iflag |= UInt(IUTF8)
+        attributes.c_iflag |= tcflag_t(IUTF8)
         
         // Clear size bits, parity checking off.
-        attributes.c_cflag &= ~UInt(CSIZE | PARENB)
+        attributes.c_cflag &= ~tcflag_t(CSIZE | PARENB)
         
         // 8 bits/char.
-        attributes.c_cflag |= UInt(CS8)
+        attributes.c_cflag |= tcflag_t(CS8)
         
         // Output processing off.
-        attributes.c_oflag &= ~UInt(OPOST)
+        attributes.c_oflag &= ~tcflag_t(OPOST)
         
         // 1 byte at a time, no timer.
         attributes[VMIN] = 1
@@ -106,7 +106,7 @@ public final class TerminalInputMode {
             guard
                 attributes.c_lflag & tcflag_t(ECHO | ICANON | IEXTEN) == 0,
                 attributes.c_iflag & tcflag_t(BRKINT | ICRNL | INPCK | ISTRIP | IXON) == 0,
-                attributes.c_cflag & tcflag_t(CSIZE | PARENB | CS8) == UInt(CS8),
+                attributes.c_cflag & tcflag_t(CSIZE | PARENB | CS8) == tcflag_t(CS8),
                 attributes.c_oflag & tcflag_t(OPOST) == 0,
                 attributes[VMIN] == 1,
                 attributes[VTIME] == 0 else {
