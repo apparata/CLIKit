@@ -50,7 +50,7 @@ public final class TerminalInputMode {
         do {
             let attributes = try readTerminalAttributes()
             guard
-                attributes.c_lflag & UInt(ECHO | ICANON) == 0,
+                attributes.c_lflag & tcflag_t(ECHO | ICANON) == 0,
                 attributes[VMIN] == 1,
                 attributes[VTIME] == 0 else {
                 // Only some of the changes were made.
@@ -104,10 +104,10 @@ public final class TerminalInputMode {
         do {
             let attributes = try readTerminalAttributes()
             guard
-                attributes.c_lflag & UInt(ECHO | ICANON | IEXTEN) == 0,
-                attributes.c_iflag & UInt(BRKINT | ICRNL | INPCK | ISTRIP | IXON) == 0,
-                attributes.c_cflag & UInt(CSIZE | PARENB | CS8) == UInt(CS8),
-                attributes.c_oflag & UInt(OPOST) == 0,
+                attributes.c_lflag & tcflag_t(ECHO | ICANON | IEXTEN) == 0,
+                attributes.c_iflag & tcflag_t(BRKINT | ICRNL | INPCK | ISTRIP | IXON) == 0,
+                attributes.c_cflag & tcflag_t(CSIZE | PARENB | CS8) == UInt(CS8),
+                attributes.c_oflag & tcflag_t(OPOST) == 0,
                 attributes[VMIN] == 1,
                 attributes[VTIME] == 0 else {
                 // Only some of the changes were made.
