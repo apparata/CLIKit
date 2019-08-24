@@ -170,8 +170,8 @@ private extension termios {
                        c_cflag: zeroFlag,
                        c_lflag: zeroFlag,
                        c_cc: cct,
-                       c_ispeed: zeroFlag,
-                       c_ospeed: zeroFlag)
+                       c_ispeed: speed_t(0),
+                       c_ospeed: speed_t(0))
     }
     
     subscript(cc: Int32) -> cc_t {
