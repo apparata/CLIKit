@@ -63,12 +63,21 @@ public class Subprocess {
         let attributes = SubprocessAttributes()
         let io = try SubprocessIO(captureOutput: captureOutput)
         
+        #if os(macOS)
         let result = posix_spawnp(&processID,
                                   cArguments.cStrings[0],
                                   &io.actions,
                                   &attributes.attributes,
                                   cArguments.cStrings,
                                   cEnvironment.cStrings)
+        #else
+        let result = posix_spawnp(&processID,
+                                  cArguments.cStrings[0],
+                                  &io.actions!,
+                                  &attributes.attributes!,
+                                  cArguments.cStrings,
+                                  cEnvironment.cStrings)
+        #endif
         
         guard result == 0 else {
             throw SubprocessError.failedToSpawn(errorCode: Int(result),

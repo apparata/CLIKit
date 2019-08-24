@@ -31,6 +31,15 @@ final class SubprocessIO {
     }
     
     private func setUp(captureOutput: Bool) throws {
+        
+        #if os(Linux)
+        guard actions != nil else {
+            throw SubprocessError.failedToCaptureOutput(errorCode: 4000)
+        }
+        
+        var actions = self.actions!
+        #endif
+        
         // Open /dev/null as stdin.
         posix_spawn_file_actions_addopen(&actions, 0, devNull, O_RDONLY, 0)
         
@@ -52,5 +61,9 @@ final class SubprocessIO {
             posix_spawn_file_actions_adddup2(&actions, 1, 1)
             posix_spawn_file_actions_adddup2(&actions, 2, 2)
         }
+        
+        #if os(Linux)
+        self.actions = actions
+        #endif
     }
 }
