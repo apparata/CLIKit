@@ -12,7 +12,11 @@ import Darwin.C
 
 final class SubprocessAttributes {
     
+    #if os(macOS)
     var attributes: posix_spawnattr_t? = nil
+    #elseif os(Linux)
+    var attributes: posix_spawnattr_t = posix_spawnattr_t()
+    #endif
     
     init() {
         makeAttributes()
