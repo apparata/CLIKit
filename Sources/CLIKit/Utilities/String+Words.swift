@@ -4,6 +4,7 @@
 
 import Foundation
 
+#if os(macOS)
 public extension String {
     
     func wordRange(at index: Int) -> Range<String.Index>? {
@@ -22,3 +23,4 @@ public extension String {
         return (String(self[range]), range)
     }
 }
+#endif

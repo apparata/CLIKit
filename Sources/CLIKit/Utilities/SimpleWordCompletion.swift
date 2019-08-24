@@ -4,6 +4,7 @@
 
 import Foundation
 
+#if os(macOS)
 public class SimpleWordCompletion: TextCompletion {
     
     public let completions: [String]
@@ -46,3 +47,4 @@ public class SimpleWordCompletion: TextCompletion {
         return (input, index)
     }
 }
+#endif
