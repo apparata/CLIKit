@@ -3,6 +3,12 @@
 //
 
 import Foundation
+#if os(Linux)
+import Glibc
+#else
+import Darwin
+import Darwin.C
+#endif
 
 public extension Character {
     
@@ -27,9 +33,11 @@ public extension Character {
         if isLetter || isNumber || isPunctuation || isSymbol || isMathSymbol || isEmoji {
             return true
         }
+        #if macOS
         if let scalar = unicodeScalars.first {
-            return iswprint(Int32(scalar.value)) != 0
+            return iswprint(wint_t(scalar.value)) != 0
         }
+        #endif
         return false
     }
     
