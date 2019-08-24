@@ -60,10 +60,11 @@ public class Environment {
             return ProcessInfo.processInfo.environment[key]
         }
         set {
-            if newValue == nil {
+            guard let value = newValue else {
                 unset(key)
+                return
             }
-            setenv(key, newValue, 1)
+            setenv(key, value, 1)
         }
     }
     

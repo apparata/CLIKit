@@ -162,9 +162,16 @@ private extension termios {
     
     static var zero: termios {
         let zero: cc_t = 0
+        let zeroFlag: tcflag_t = 0
         let cct = (zero, zero, zero, zero, zero, zero, zero, zero, zero, zero,
                    zero, zero, zero, zero, zero, zero, zero, zero, zero, zero)
-        return termios(c_iflag: 0, c_oflag: 0, c_cflag: 0, c_lflag: 0, c_cc: cct, c_ispeed: 0, c_ospeed: 0)
+        return termios(c_iflag: zeroFlag,
+                       c_oflag: zeroFlag,
+                       c_cflag: zeroFlag,
+                       c_lflag: zeroFlag,
+                       c_cc: cct,
+                       c_ispeed: zeroFlag,
+                       c_ospeed: zeroFlag)
     }
     
     subscript(cc: Int32) -> cc_t {
