@@ -52,10 +52,6 @@ public final class CommandLineParser {
         
         let internalCommand = buildInternalCommand(command, commandName)
         
-        if arguments.isEmpty {
-            throw CommandLineError.usageRequested(command: internalCommand)
-        }
-
         let resultingState = runStateMachine(for: arguments, command: internalCommand)
         
         switch resultingState {

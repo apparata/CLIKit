@@ -146,6 +146,19 @@ final class CLIKitTests: XCTestCase {
         XCTAssertTrue(true)
     }
     
+    func testMainframeCommand() {
+        
+        func runCommand(_ arguments: [String]) throws {
+            let parser = CommandLineParser()
+            
+            let parsedCommand = try parser.parseArguments(arguments, command: MainframeCommand(), expectedRootCommand: "mainframe")
+            try parsedCommand.run()
+        }
+        
+        XCTAssertNoThrow(try runCommand(["mainframe", "-p", "4040"]))
+        XCTAssertNoThrow(try runCommand(["mainframe"]))
+    }
+    
     static var allTests = [
         ("testCommandFibonacci", testCommandFibonacci),
         ("testSubcommandFibonacci", testSubcommandFibonacci),
@@ -154,5 +167,6 @@ final class CLIKitTests: XCTestCase {
         ("testOptionalInput", testOptionalInput),
         ("testOptionalInput2", testOptionalInput2),
         ("testCommandBuildBot", testCommandBuildBot),
+        ("testMainframeCommand", testMainframeCommand),
     ]
 }
