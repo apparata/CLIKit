@@ -20,9 +20,30 @@ class BuildCommand: Command {
     }
 }
 
+class ListBranchesCommand: Command {
+
+    let description = "List branches"
+
+    var action: ((ListBranchesCommand) -> Void)?
+
+    func run() {
+        print("Requested a branch list")
+        action?(self)
+    }
+}
+
+
+class BranchCommand: Commands {
+
+    let description = "Branch commands"
+
+    let list = ListBranchesCommand()
+}
+
 class BotCommands: Commands {
     
     let description = "BuildBot commands"
     
     let build = BuildCommand()
+    let branch = BranchCommand()
 }

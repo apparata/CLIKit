@@ -208,7 +208,11 @@ internal class InternalNamedCommands: InternalCommands, Commands {
         parentCommands = parents
         internalCommands = []
         internalCommands = originalCommands.namedCommands.map {
-            InternalNamedCommand(name: $0.name, command: $0.command, parents: parents + [name])
+            if let subcommands = $0.command as? Commands {
+                return InternalNamedCommands(name: $0.name, commands: subcommands, parents: parents + [name])
+            } else {
+                return InternalNamedCommand(name: $0.name, command: $0.command, parents: parents + [name])
+            }
         }
     }
     

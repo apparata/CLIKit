@@ -45,7 +45,7 @@ final class CLIKitTests: XCTestCase {
         
         XCTAssertNoThrow(try runCommand())
     }
-    
+
     func testUnrecognizedCommand() {
         
         func runCommand() throws {
@@ -121,7 +121,32 @@ final class CLIKitTests: XCTestCase {
         
         XCTAssertNoThrow(try runCommand())
     }
-    
+
+    func testNestedCommands() {
+
+        func runCommand() throws {
+            let parser = CommandLineParser()
+
+            let arguments: [String] = [
+                "bot",
+                "branch",
+                "list"
+            ]
+
+            let parsedCommand = try parser.parseArguments(arguments, command: BotCommands(), expectedRootCommand: "bot")
+            try parsedCommand.run()
+        }
+
+        do {
+            try runCommand()
+        } catch {
+            print(error.localizedDescription)
+            XCTAssertTrue(false, error.localizedDescription)
+        }
+
+        XCTAssertTrue(true)
+    }
+
     func testCommandBuildBot() {
         
         func runCommand() throws {
@@ -141,6 +166,7 @@ final class CLIKitTests: XCTestCase {
             try runCommand()
         } catch {
             print(error.localizedDescription)
+            XCTAssertTrue(false)
         }
         
         XCTAssertTrue(true)
@@ -167,6 +193,7 @@ final class CLIKitTests: XCTestCase {
         ("testOptionalInput", testOptionalInput),
         ("testOptionalInput2", testOptionalInput2),
         ("testCommandBuildBot", testCommandBuildBot),
+        ("testNestedCommands", testNestedCommands),
         ("testMainframeCommand", testMainframeCommand),
     ]
 }
