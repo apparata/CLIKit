@@ -4,34 +4,29 @@
 # Build reference documentation
 #
 
-# Requires sourcekitten at https://github.com/jpsim/SourceKitten.git
+MODULE=CLIKit
+AUTHOR=Apparata
+AUTHOR_URL=http://apparata.se
+GITHUB_URL=https://github.com/apparata/CLIKit
 
 # Change directory to where this script is located
 cd "$(dirname ${BASH_SOURCE[0]})"
 
-# SourceKitten needs .build/debug.yaml, so let's build the package.
-rm -rf .build
-swift build
-
-# The output will go in refdocs/
-# Make sure /refdocs is in .gitignore
-rm -rf docs/CLIKit
-mkdir -p "docs/CLIKit"
-
-sourcekitten doc --spm-module CLIKit > CLIKitDocs.json
+# The output will go in docs/${MODULE}
+rm -rf "docs/${MODULE}"
+mkdir -p "docs/${MODULE}"
 
 jazzy \
   --clean \
-  --swift-version 5.1.0 \
-  --sourcekitten-sourcefile CLIKitDocs.json \
-  --author Apparata \
-  --author_url http://apparata.se \
-  --github_url https://github.com/apparata/CLIKit \
-  --output "docs/CLIKit" \
+  --module $MODULE \
+  --author $AUTHOR \
+  --author_url $AUTHOR_URL \
+  --github_url $GITHUB_URL \
+  --output "docs/${MODULE}" \
   --readme "README.md" \
   --theme fullwidth \
-  --source-directory .
+  --source-directory . \
+  --swift-build-tool spm \
+  --build-tool-arguments -Xswiftc,-swift-version,-Xswiftc,5
 
-rm CLIKitDocs.json
-
-open "docs/CLIKit/index.html"
+open "docs/${MODULE}/index.html"
