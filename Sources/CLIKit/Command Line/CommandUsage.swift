@@ -91,7 +91,7 @@ public final class CommandUsage {
                 
         var text = "FLAGS:\n"
         
-        for (name, flag) in flags {
+        for (name, flag) in flags.sorted(by: \.name) {
             var row = "  "
             if let short = flag.shortName {
                 row += "-\(short), "
@@ -113,7 +113,7 @@ public final class CommandUsage {
 
         var text = "OPTIONS:\n"
         
-        for (name, option) in options {
+        for (name, option) in options.sorted(by: \.name) {
             var row = "  "
             if let short = option.shortName {
                 row += "-\(short), "
@@ -139,7 +139,7 @@ public final class CommandUsage {
 
         var text = "INPUTS:\n"
         
-        for (name, input) in inputs {
+        for (name, input) in inputs.sorted(by: \.name) {
             var row = "  "
             row += name
             row += calculatePadding(string: row)

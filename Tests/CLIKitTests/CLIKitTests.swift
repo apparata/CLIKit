@@ -155,6 +155,7 @@ final class CLIKitTests: XCTestCase {
             let arguments: [String] = [
                 "bot",
                 "build",
+                "ios",
                 "master"
             ]
         

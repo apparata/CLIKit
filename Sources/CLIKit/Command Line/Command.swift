@@ -67,7 +67,7 @@ public extension Command {
                 return nil
             }
             return (name, property)
-        }.sorted(by: \.name)
+        }
     }
     
     internal func assignArgumentsNames() {

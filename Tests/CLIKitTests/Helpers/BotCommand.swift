@@ -9,8 +9,11 @@ class BuildCommand: Command {
     
     let description = "Request a build"
     
-    @CommandRequiredInput(description: "branch")
-    var branch: String
+    @CommandRequiredInput(description: "Platform to build for.")
+    var platform: String
+    
+    @CommandOptionalInput(description: "branch")
+    var branch: String?
     
     var action: ((BuildCommand) -> Void)?
         
