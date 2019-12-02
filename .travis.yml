@@ -1,0 +1,21 @@
+language: swift
+os: osx
+
+git:
+  depth: 1
+  
+stages:
+  - name: test
+
+branches:
+  only:
+  - master
+
+jobs:
+  include:
+    - stage: test
+      name: "Unit Tests"
+      osx_image: xcode11.2
+      script:
+        - swift package update
+        - swift test
