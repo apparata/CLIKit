@@ -399,26 +399,26 @@ extension CommandLineParser: ParserStateMachineDelegate {
         case (.parsedOption(let option), _):
             return .failure(.missingOptionValue(option.name ?? "N/A"))
 
-        case (.parsedOptionValue(_), .noMoreArguments):
+        case (.parsedOptionValue(_, _), .noMoreArguments):
             return evaluateExitState(context)
-        case (.parsedOptionValue(_), .scannedFlag(let flag)):
+        case (.parsedOptionValue(_, _), .scannedFlag(let flag)):
             return .parsedFlag(flag)
-        case (.parsedOptionValue(_), .scannedOption(let option)):
+        case (.parsedOptionValue(_, _), .scannedOption(let option)):
             return .parsedOption(option)
-        case (.parsedOptionValue(_), .scannedInput(let input, let value)):
+        case (.parsedOptionValue(_, _), .scannedInput(let input, let value)):
             return .parsedInput(input, value)
-        case (.parsedOptionValue(_), .scannedInvalidFlagOrOption):
+        case (.parsedOptionValue(_, _), .scannedInvalidFlagOrOption):
             return .failure(argument.map { .invalidFlagOrOption($0) } ?? .unexpectedError)
-        case (.parsedOptionValue(_), .scannedHelpFlag(let subcommand)):
+        case (.parsedOptionValue(_, _), .scannedHelpFlag(let subcommand)):
             return .failure(.usageRequested(command: subcommand))
-        case (.parsedOptionValue(_), _):
+        case (.parsedOptionValue(_, _), _):
             return .failure(argument.map { .unexpectedArgument($0) } ?? .unexpectedError)
 
-        case (.parsedInput(_), .noMoreArguments):
+        case (.parsedInput(_, _), .noMoreArguments):
             return evaluateExitState(context)
-        case (.parsedInput(_), .scannedInput(let input, let value)):
+        case (.parsedInput(_, _), .scannedInput(let input, let value)):
             return .parsedInput(input, value)
-        case (.parsedInput(_), _):
+        case (.parsedInput(_, _), _):
             return .failure(argument.map { .unexpectedArgument($0) } ?? .unexpectedError)
             
         default:
