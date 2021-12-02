@@ -14,7 +14,7 @@ public extension Character {
     
     var isEmoji: Bool {
         // swiftlint:disable force_unwrapping
-        let emojiPatterns = [
+        let emojiPatterns: [ClosedRange<UnicodeScalar>] = [
             UnicodeScalar(0x1F600)!...UnicodeScalar(0x1F64F)!,
             UnicodeScalar(0x1F300)!...UnicodeScalar(0x1F5FF)!,
             UnicodeScalar(0x1F680)!...UnicodeScalar(0x1F6FF)!,

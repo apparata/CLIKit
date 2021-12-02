@@ -46,7 +46,7 @@ class ParserStateMachine {
     
 }
 
-protocol ParserStateMachineDelegate: class {
+protocol ParserStateMachineDelegate: AnyObject {
     
     /// Return state to transition to from the current state given an event.
     /// Return nil to not trigger a transition.
